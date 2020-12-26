@@ -29,14 +29,19 @@
   font-weight: bolder;
 }
 .header-dark{
-  border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+  border-bottom: none;
 }
 .header-dark h2:hover{
   color: rgb(255, 187, 0);
   font-weight: bolder;
 }
+.header__link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .header__link.active{
-  color: rgb(218, 149, 22);
+  color: rgb(250, 166, 10);
 } 
 
 .app__switch{
@@ -52,7 +57,7 @@
   color: #fff;
 }
 .header-scroll{
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.904);
 }
 .sidebar__icon{
   color: #fff;

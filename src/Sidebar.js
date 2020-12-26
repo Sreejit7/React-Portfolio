@@ -18,7 +18,7 @@ const Sidebar = ({sidebar, showSidebar}) => {
               return(
                 <li key = {index} className = 'sidebar__text'>
                   {item.name !== 'RESUME' &&
-                    <HLink to = {item.link}>
+                    <HLink smooth to = {item.link}>
                       <span>{item.name}</span>
                     </HLink>
                   }

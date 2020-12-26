@@ -156,6 +156,7 @@ function About() {
            <h1>When I'm not hustling</h1>
            <i class="em em-man-getting-massage" aria-role="presentation" aria-label=""></i>
           </div>
+          <h4>I'm probably doing one of these things</h4>
           <motion.div
             className = "hobbies__list"
           >

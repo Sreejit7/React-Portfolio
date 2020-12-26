@@ -10,23 +10,32 @@ import Sidebar from './Sidebar';
 function Header({toggle, onToggle}) {
   const [sidebar, setSidebar] = useState(false);
   const [scrollNav, setScrollNav] = useState(false);
-
-  const changeNav = () => {
-    if(window.scrollY >= 70){
-      setScrollNav(true);
+  useEffect(() => {
+    const changeNav = () => {
+      if(window.scrollY >= 80){
+        setScrollNav(true);
+      }
+      else{
+        setScrollNav(false);
+      }
+    };
+  
+    window.addEventListener('scroll', changeNav);
+    return () => {
+      window.removeEventListener('scroll', changeNav);
     }
-    else{
-      setScrollNav(false);
-    }
-  };
-
-  window.addEventListener('scroll', changeNav)
+  }, []);
+  
 
   return (
     <>
     <motion.div className = {`header ${toggle && "header-dark"} ${scrollNav && "header-scroll"}`}>
       <div className="header__items">
-        <Link smooth to = '#about' className = "header__link ">
+        <Link 
+          smooth to = '#about' 
+          className = "header__link "
+         
+        >
           <h2>About</h2>
         </Link>
         <Link smooth to = '#project' className = "header__link ">

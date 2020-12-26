@@ -1,11 +1,13 @@
-import React,{useState, useRef} from 'react';
+import React,{useState, useRef, useEffect} from 'react';
 import './App.css';
 import Header from './Header';
 import {motion} from 'framer-motion';
-
+import {getDimensions} from './util';
 import IconButton from '@material-ui/core/IconButton';
 import {GitHub, LinkedIn} from '@material-ui/icons';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import {ExternalLink} from 'react-external-link';
+import {HashLink as HLink} from 'react-router-hash-link';
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
@@ -14,15 +16,49 @@ import Footer from './Footer';
 
 function App() {
   const [isToggled, setIsToggled] = useState(true);
-  
+  const [visibleSection, setVisibleSection] = useState(null);
+  const [topButton, setTopButton] = useState(false);
+  const headerRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const sectionRefs = [
+    {section : "about" , ref: "aboutRef"},
+    {section: "project", ref: "projectRef"},
+    {section: "contact", ref: "contactRef"},
+  ];
+  const handleScroll = () => {
+    const { height: headerHeight } = getDimensions(headerRef.current);
+    const scrollPosition = window.scrollY + headerHeight;
+  };
+  useEffect(() => {
+    const handleToTop = () => {
+      if(window.scrollY >= aboutRef.current.offsetTop){
+        setTopButton(true);
+      }
+      else{
+        setTopButton(false);
+      }
+    };
+    window.addEventListener('scroll', handleToTop);
+
+    /*return () => {
+      window.removeEventListener('scroll', handleToTop);
+    }*/
+  }, []);
+
 
   return (
     <>
     <div className={`app__body ${isToggled && "app-dark"}`}>
-    <Header 
-          toggle = {isToggled} 
-          onToggle = {() => setIsToggled(!isToggled)}
-    />
+    <div className="app__header" ref = {headerRef}>
+      <Header 
+            toggle = {isToggled} 
+            onToggle = {() => setIsToggled(!isToggled)}
+      />
+    </div>
+    
     <div className = {`app__intro ${!isToggled && "app__intro-light"}`}>
         
       <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
@@ -62,19 +98,27 @@ function App() {
           </motion.div>
         </div>
       </div>
-      <div className = 'about__section'>
+      <div className = 'about__section' ref = {aboutRef}>
       <About />
       </div>
-      <div className = 'projects__section'>
+      <div className = 'projects__section' ref = {projectRef}>
       <Projects/>
       </div>
-      <div className = 'contact__section'>
+      <div className = 'contact__section' ref = {contactRef}>
       <Contact/>
+      </div>
+      <div className = {`toTop ${topButton && "visible"}`} id = '#top'>
+        <HLink smooth to = '#top'>
+        <IconButton>
+          <ExpandLessIcon className = "toTopIcon"/>
+        </IconButton>
+        </HLink>
       </div>
       <div >
       <Footer/>
       </div>
     </div>
+    
     </>
   );
 }
