@@ -1,0 +1,239 @@
+.about{
+  display: flex;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+.about__left{
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.education{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+.about__title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.about__title h1{
+  color: #fff;
+  font-family:'Segoe UI', sans-serif;
+  margin-right: 10px;
+}
+.institutes{
+  cursor: pointer;
+  background: transparent;
+  padding: 15px;
+  /*border: 0.25px solid white;*/
+  background-color: rgb(28, 111, 219);
+  border-radius: 20px;
+  color: #fff;
+  /*box-shadow: 0px 0px 8px 0px #fff;*/
+  margin-bottom: 15px;
+  width: 80%;
+}
+.about__contact{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact__info{
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  border-radius: 20px;
+  color: #fff;
+  /*box-shadow: 0px 0px 8px 0px #fff;*/
+  padding: 15px;
+  line-height: 2;
+  /*border: 0.25px solid #fff;*/
+  margin-bottom: 20px;
+  background-color: rgb(221, 134, 19);
+  font-size: larger;
+  font-weight: bold;
+  
+}
+.contact__infoLines{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  justify-content: center;
+}
+.contact__infoLine{
+  display: flex;
+  padding: 10px;
+}
+.contact__icon{
+  color: #fff;
+  margin-right: 15px;
+  left: 35;
+}
+.contact__img{
+  width: 200px;
+  object-fit: contain;
+  border-radius: 15px;
+}
+.institutes h2, h3, h4, em{
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+.about__right{
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.skills{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.skill__bars{
+  padding: 30px;
+  /*border: 0.25px solid #fff;*/
+  border-radius: 20px;
+  /*box-shadow: 0px 0px 8px 0px #fff;*/
+}
+.skill__bars h3{
+  color: #fff;
+  
+}
+.skillbar{
+  width: 100%;
+  background: #051129;
+  border: 1px solid rgba(42, 1, 58, 0.959);
+  height: 20px;
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px #320136ee;
+}
+.skillbar span{
+  background: rgb(247,202,3);
+  background: linear-gradient(90deg, rgba(247,202,3,1) 35%, rgba(247,70,3,1) 92%);
+  height: 20px;
+  border-radius: 20px;
+  float: left;
+}
+.hobbies{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 30px;
+}
+.hobbies__list{
+  margin: auto;
+  display: flex;
+  height: 100%;
+  padding: 15px;
+  justify-content: space-evenly;
+}
+.hobby__item{
+  background-color: rgb(32, 253, 80);
+  /*box-shadow: 0px 0px 8px 0px #fff;*/
+  padding: 15px;
+  line-height: 1.5;
+  margin-right: 5px;
+  max-width: 250px;
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.hobby__name{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.football{
+  animation: jumping 0.2s alternate ease infinite;
+}
+.resume{
+  margin-top: 10px;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.resume__download{
+  margin-right: 30px;
+  padding: 10px;
+  width: 40%;
+  background-color: rgb(250, 178, 44);
+  color: rgb(27, 26, 26);
+  font-size: larger;
+  font-weight: 700;
+  box-shadow: 0px 0px 8px 2px rgb(76, 1, 95);
+  cursor: pointer;
+  outline-width: 0;
+  border-radius: 10px;
+}
+.resume__download:hover{
+  transform: scale(1.1);
+  opacity: 0.75;
+}
+.resume-icon{
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0px 0px 10px 0px #051129;
+}
+@keyframes jumping{
+  from{
+    transform: translateY(-5px);
+  }
+  to{
+    transform: translateY(5px);
+  }
+}
+@media(max-width: 850px){
+  .about{
+    flex-direction: column;
+  }
+  .about__contact, .education{
+    width: 80%;
+  }
+  .about__left{
+    flex: 0.5;
+  }
+  .about__right{
+    flex: 0.5;
+  }
+  .about__title{
+    font-size: smaller;
+  }
+  .skillbar, .skillbar span{
+    height: 12px;
+  }
+}
+@media(max-width: 600px){
+  .contact__info{
+    flex-direction: column;
+    font-size: 1rem;
+  }
+  .contact__img{
+    margin: auto;
+  }
+}
+@media(max-width: 425px){
+  .hobbies__list{
+    flex-direction: column;
+  }
+  
+}

@@ -1,0 +1,128 @@
+.app__body{
+  background: rgb(250,244,245);
+  background: linear-gradient(180deg, rgba(250,244,245,1) 4%, rgba(153,187,187,1) 45%, rgba(103,179,214,1) 76%, rgba(43,143,201,1) 99%);
+  
+}
+.app-dark{
+  background: rgb(1,13,32);
+  background: linear-gradient(180deg, rgba(1,13,32,1) 9%, rgba(4,25,57,1) 38%, rgba(20,61,115,1) 83%, rgba(33,85,153,1) 99%);
+}
+
+.app__intro{
+  display: flex;
+  flex-direction: column;
+  background-image: url('https://media.giphy.com/media/l3nWay9wKNdq6WTxm/giphy.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  margin-top: -80px;
+  padding-bottom: 10vh;
+}
+.app__intro__body{
+  display: flex;
+}
+.app__intro-light{
+  background-image: url('https://i.pinimg.com/originals/74/43/a3/7443a31b6a19e5630b94a6538ff9bdd1.gif');
+  background-repeat: repeat;
+  background-size: auto;
+}
+.intro__left{
+  margin-top: 20vh;
+  flex: 1;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.intro__left h1{
+  font-family:'Segoe UI', sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px 5px 1px rgb(1, 8, 20);
+}
+.intro__left p{
+  font-weight: 600;
+}
+.intro__details{
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.intro__right{
+  flex: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro__desc{
+  width: 100%;
+  padding: 20px;
+  word-spacing: 3px;
+  line-height: 1.6;
+  text-align: center;
+}
+.intro__img{
+  width: 400px;
+  object-fit: contain;
+  margin: auto;
+  margin-top: 20px;
+}
+.intro__icons{
+  margin-top: 20px;
+  padding: 10px;
+}
+.intro__icons a{
+  text-decoration: none;
+}
+.intro__icons > .MuiIconButton-root{
+  color: #fff;
+  padding: 10px;
+  margin-right: 5px;
+}
+.li-icon, .gh-icon{
+  color: white;
+}
+
+.li-icon:hover{
+  color: rgb(35, 116, 221);
+  transform: scale(1.3);
+}
+.gh-icon:hover{
+  color: rgb(7, 133, 13);
+  transform: scale(1.3);
+}
+.about__section{
+  background: rgba(117, 1, 121, 0.74);
+}
+.projects__section{
+  background: rgb(22, 8, 102);
+}
+.contact__section{
+  background:rgb(63, 145, 252);
+  bottom: 0;
+}
+.light{
+  color: rgb(1, 11, 39);
+}
+
+@media(max-width: 768px){
+  .app__intro{
+    flex-direction: column;
+  }
+  .intro__img{
+    width: 300px;
+    margin-top: 20px;
+  }
+  
+}
+@media(max-width: 450px){
+  .app__switch{
+    transform: translate(-80vw, 20%);
+  }
+}
