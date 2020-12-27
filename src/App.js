@@ -74,23 +74,26 @@ function App() {
   return (
     <>
     <div className={`app__body ${isToggled && "app-dark"}`}>
-    <div className="app__header" ref = {headerRef}>
+    <motion.div className="app__header" ref = {headerRef}>
       <Header 
         toggle = {isToggled} 
         onToggle = {() => setIsToggled(!isToggled)}
         section = {visibleSection}
         refs = {refs}
       />
-    </div>
+    </motion.div>
     
     <div className = {`app__intro ${!isToggled && "app__intro-light"}`}>
         
       <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
         <div className="app__intro__body">
           <motion.div className = {`intro__left ${!isToggled && "light"}`}
-            initial = {{y: '-100vh'}}
-            animate = {{y: 30}}  
-            transition = {{type: "spring", stiffness: 150, delay: 0.25, duration: 0.15}}
+            /*initial = {{y: '-100vh'}}
+            animate = {{y: 30}}  */
+            
+            initial = {{zoom: 0.25, opacity: 0, y: 0}}
+            animate = {{zoom: 1, opacity: 1, y: 30}}
+            transition = {{type: "tween", delay: 0.25, duration: 0.5}}
           > 
             <div className="intro__details">
               <motion.h1 style = {{fontSize: 35, marginLeft: 10}}>Hello, I'm</motion.h1>

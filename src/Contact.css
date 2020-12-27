@@ -31,7 +31,7 @@
   border-radius: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  box-shadow: 5px 5px 8px 0px rgba(255, 255, 255, 0.3);
+  box-shadow: 4px 4px 3px 3px rgb(8, 1, 46);
 }
 .form__input{
   outline-width: 0;

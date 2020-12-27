@@ -28,14 +28,19 @@ function Header({toggle, onToggle, section, refs}) {
 
   return (
     <>
-    <motion.div className = {`header ${toggle && "header-dark"} ${scrollNav && "header-scroll"}`}>
+    <motion.div 
+      className = {`header ${toggle && "header-dark"} ${scrollNav && "header-scroll"}`}
+      initial = {{y: '-10vh'}}
+      animate = {{y: 0}}
+      transition = {{type: 'spring', stiffness: 100, delay: 0.45, duration: 0.5}}
+    >
       <div className="header__items">
         <Link 
           smooth to = '#about' 
           className = {`header__link ${section === "about" && "link-selected"}`}
 
         >
-          <h2>About</h2>
+          <h2>About Me</h2>
         </Link>
         <Link 
           smooth to = '#project' 
