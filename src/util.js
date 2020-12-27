@@ -1,11 +1,12 @@
 export const getDimensions = elem => {
   const {height} = elem.getBoundingClientRect();
-  const offSetTop = elem.offSetTop;
-  const offSetBottom = offSetTop + height;
+  const offsetTop = elem.offsetTop;
+  const offsetBottom = offsetTop + height;
 
   return {
     height,
-    offSetTop,
-    offSetBottom,
+    offsetTop,
+    offsetBottom,
   };
 } ;
+

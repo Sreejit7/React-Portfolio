@@ -16,46 +16,70 @@ import Footer from './Footer';
 
 function App() {
   const [isToggled, setIsToggled] = useState(true);
-  const [visibleSection, setVisibleSection] = useState(null);
+  const [visibleSection, setVisibleSection] = useState();
   const [topButton, setTopButton] = useState(false);
   const headerRef = useRef(null);
   const aboutRef = useRef(null);
   const projectRef = useRef(null);
   const contactRef = useRef(null);
-
   const sectionRefs = [
-    {section : "about" , ref: "aboutRef"},
-    {section: "project", ref: "projectRef"},
-    {section: "contact", ref: "contactRef"},
+    { section: "about", ref: aboutRef },
+    { section: "project", ref: projectRef },
+    { section: "contact", ref: contactRef },
   ];
-  const handleScroll = () => {
-    const { height: headerHeight } = getDimensions(headerRef.current);
-    const scrollPosition = window.scrollY + headerHeight;
+  const refs = {
+    about: {aboutRef},
+    project: {projectRef},
+    contact: {contactRef}
   };
   useEffect(() => {
+    const { height: headerHeight } = getDimensions(headerRef.current);
     const handleToTop = () => {
-      if(window.scrollY >= aboutRef.current.offsetTop){
+      if(window.scrollY + headerHeight >= aboutRef.current.offsetTop ){
         setTopButton(true);
       }
       else{
         setTopButton(false);
       }
     };
+    handleToTop();
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + headerHeight;
+      const selected = sectionRefs.find(({ section, ref }) => {
+        if(ref){
+          const ele = ref.current;          
+          if (ele) {
+            const { offsetBottom, offsetTop } = getDimensions(ele);
+            return scrollPosition > offsetTop && scrollPosition < offsetBottom;
+          }
+        }
+      });
+  
+      if (selected && selected.section !== visibleSection) {
+        setVisibleSection(selected.section);
+      } else if (!selected && visibleSection) {
+        setVisibleSection(undefined);
+      }
+    };  
+    handleScroll();
     window.addEventListener('scroll', handleToTop);
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, [visibleSection]);
 
-    /*return () => {
-      window.removeEventListener('scroll', handleToTop);
-    }*/
-  }, []);
-
+  //console.log(visibleSection);
 
   return (
     <>
     <div className={`app__body ${isToggled && "app-dark"}`}>
     <div className="app__header" ref = {headerRef}>
       <Header 
-            toggle = {isToggled} 
-            onToggle = {() => setIsToggled(!isToggled)}
+        toggle = {isToggled} 
+        onToggle = {() => setIsToggled(!isToggled)}
+        section = {visibleSection}
+        refs = {refs}
       />
     </div>
     

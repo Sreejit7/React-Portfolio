@@ -2,12 +2,12 @@ import React,{useState, useEffect} from 'react'
 import {motion} from 'framer-motion';
 import Switch from './Switch';
 import './Header.css';
-import {HashLink as Link } from 'react-router-hash-link';
+import {NavHashLink as Link } from 'react-router-hash-link';
 import {ExternalLink} from 'react-external-link';
 import {Link as LinkR} from 'react-router-dom';
 import ReorderIcon from '@material-ui/icons/Reorder';
 import Sidebar from './Sidebar';
-function Header({toggle, onToggle}) {
+function Header({toggle, onToggle, section, refs}) {
   const [sidebar, setSidebar] = useState(false);
   const [scrollNav, setScrollNav] = useState(false);
   useEffect(() => {
@@ -24,8 +24,7 @@ function Header({toggle, onToggle}) {
     return () => {
       window.removeEventListener('scroll', changeNav);
     }
-  }, []);
-  
+  }, []);  
 
   return (
     <>
@@ -33,18 +32,24 @@ function Header({toggle, onToggle}) {
       <div className="header__items">
         <Link 
           smooth to = '#about' 
-          className = "header__link "
-         
+          className = {`header__link ${section === "about" && "link-selected"}`}
+
         >
           <h2>About</h2>
         </Link>
-        <Link smooth to = '#project' className = "header__link ">
+        <Link 
+          smooth to = '#project' 
+          className = {`header__link ${section === "project" && "link-selected"}`}
+        >
           <h2>Projects</h2>
         </Link>
         <ExternalLink href = 'https://drive.google.com/file/d/1nln2EHepkQEKQfRpl0nOWjyI2TH_foD7/view?usp=sharing' className = "header__link">
           <h2>Resume</h2>
         </ExternalLink>
-        <Link smooth to = '#contact' className = "header__link ">
+        <Link 
+          smooth to = '#contact' 
+          className = {`header__link ${section === "contact" && "link-selected"}`}
+        >
           <h2>Contact Me</h2>
         </Link>
       </div>

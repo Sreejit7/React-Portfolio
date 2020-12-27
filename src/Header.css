@@ -40,8 +40,9 @@
   align-items: center;
   justify-content: center;
 }
-.header__link.active{
-  color: rgb(250, 166, 10);
+
+.link-selected > h2{
+  color: rgb(250, 172, 26);
 } 
 
 .app__switch{
