@@ -51,8 +51,8 @@ function Projects() {
                   </ul>
               </div>
                   <IconButton>
-                  <ExternalLink href = {project.gh}>
-                    <GitHub fontSize = "large" className = "gh-icon-project"/>
+                    <ExternalLink href = {project.gh}>
+                      <GitHub fontSize = "large" className = "gh-icon-project"/>
                     </ExternalLink>
                   </IconButton>
             </div>

@@ -33,6 +33,9 @@ function App() {
     contact: {contactRef}
   };
   useEffect(() => {
+    document.title = "Sreejit De  💻";
+  }, [])
+  useEffect(() => {
     const { height: headerHeight } = getDimensions(headerRef.current);
     const handleToTop = () => {
       if(window.scrollY + headerHeight >= aboutRef.current.offsetTop ){
@@ -96,7 +99,9 @@ function App() {
             transition = {{type: "tween", delay: 0.25, duration: 0.5}}
           > 
             <div className="intro__details">
-              <motion.h1 style = {{fontSize: 35, marginLeft: 10}}>Hello, I'm</motion.h1>
+              <motion.h1 
+                style = {{fontSize: 35, marginLeft: 10}} 
+              >Hello, I'm</motion.h1>
               <motion.h1 style = {{fontSize: 70, marginLeft: 10}}>Sreejit De.</motion.h1>
               <motion.p 
                 className = "intro__desc"

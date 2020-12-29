@@ -1,6 +1,7 @@
 import React from 'react';
 import {motion} from 'framer-motion';
 import emailjs from 'emailjs-com';
+import SendIcon from '@material-ui/icons/Send';
 import './Contact.css';
 function Contact() {
 

@@ -7,6 +7,7 @@
   color: #fff;
   width: 100%;
   overflow: hidden;
+  padding-bottom: 15px;
 }
 .footer__desc{
   display: flex;
@@ -20,7 +21,7 @@
   align-items: center;
   justify-content: center;
   padding: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 .icon-footer{
   margin-right: 10px;

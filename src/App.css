@@ -60,6 +60,9 @@
   justify-content: center;
   
 }
+.intro__details h1:hover{
+  text-shadow: 0px 0px 8px 0px #303fbee8;
+}
 .intro__right{
   flex: 0;
   display: flex;

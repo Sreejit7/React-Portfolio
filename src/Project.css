@@ -18,15 +18,14 @@
 .project__item{
   width: 100%;
   padding: 20px;
-  background-color: rgb(84, 23, 141);
-  box-shadow: 5px 5px 8px 0px rgba(32, 1, 73, 0.863);
+  background-color: rgba(77, 20, 131, 0.801);
+  box-shadow: 5px 5px 8px 0px rgba(32, 1, 73, 0.918);
   border-radius: 15px;
-  border: 1px solid rgb(34, 11, 70) rgb(81, 56, 122) rgb(84, 23, 141);
   margin-left: 10px;
   margin-right: 10px;
 }
 .project__item:nth-of-type(even){
-  background-color: rgb(26, 167, 124);
+  background-color: rgba(26, 167, 125, 0.815);
   color: black;
   box-shadow: 5px 5px 8px 0px rgba(1, 59, 40, 0.884);
 }
