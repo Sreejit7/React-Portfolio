@@ -19,6 +19,8 @@
   display: flex;
   margin: auto;
   width: 60%;
+  align-items: center;
+  justify-content: center;
 }
 .contact__form{
   display: flex;
@@ -86,5 +88,8 @@
   }
   .form__input, .contact__form textarea{
     width: 70%;
+  }
+  .contact__title h1{
+    font-size: 1.5rem;
   }
 }

@@ -88,5 +88,12 @@
   }
   .project__item{
     margin-bottom: 20px;
+    width: 90%;
+  }
+  
+}
+@media(max-width: 768px){
+  .project__title h1, .project__item h1{
+    font-size: 1.5rem;
   }
 }
