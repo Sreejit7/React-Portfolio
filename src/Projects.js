@@ -11,7 +11,7 @@ function Projects() {
       tech: ["React JS", "disease.sh API", "GNews API"],
       url: "https://covid-19care.web.app/",
       gh: 'https://github.com/Sreejit7/COVID-care',
-      img: 'https://lh3.googleusercontent.com/mWvT18-GWzuv4sgCgFdbyhIVH6vAkb6wXlRdPkL_-S_nciP9o5BcGXIjJbnqyVU3EodMrsyt6CT273Gd0fPcIuWHrvV0tS04soMN0VkO_6qXU-b0dU_kvnZQUrUZy5cHN6hXDtqTLeWawZ3DFW_yuoZPnd2J_P9PJPcLTpKGYodryBVAOvPaugAE1WRNnPpQVQepMzIZ1eZyCtw5T0Hd16bm1OL_ZXDbPvwp8C2dsYkkjCctqJW3tvBJB5dbggaE1JqY0g-hkZrLc50ZFMIAjsbU1MnecZcv_jUYBdUtYObO3oWZmU0tpS8taoZx_SFbqlzp1NepETGS4nc3vR6emKaJcrKp86TmFb9aJbMQriEoyMfJ0vYh5hu_rBgSjzuEle1DuZzBlMfvPCiWhUMGhNYnj7AKyrycoWQa6NntWzYma7EpHql3tyH04U2XMnTAFcs4Mtuqcv4iwapQThvCOOtgW-iaN23pm1fznTWFYz75dv0bkJpvLbbxEf6hQve4kEdd3ZZ5gu6AYVbO2FpPlzNOV3Vj8eI10bDgM2ezrWXsjiVVbesryqGarx773ufwGCWJiy6_8LSMIPhMX9tUVYeAV9xsAINorCIRH25hN1CDFBB5wIk-lk3gtfJJcVwO1Sf3h9YOM0y3KL7ZCkp7nlSS09rcEam7RVEYkBzb0tQyOs8G0EJuZBlULJp2=w765-h713-no?authuser=0'
+      img: "/images/covid-care.png"
     },
     {
       name: "HomeMade",
@@ -19,7 +19,7 @@ function Projects() {
       tech: ["React JS", "Firebase", "Stripe Payments API"],
       url: "https://github.com/Sreejit7/Ecommerce-website",
       gh: "https://github.com/Sreejit7/Ecommerce-website",
-      img: 'https://lh3.googleusercontent.com/8tiBgKHgrhy3Y9LtQ_bVwFWueoexHECMEdaSvquv7zd8XQh_8J-fEvWxMaZK7PdHhxSB-Y8SpqhNX9sAYpB-L55oSO29ulIDqllDX5eg9PIzTMhbwFuMYz0LMiCSIAU2B8IHnrYRIH7TaWkLf6M3gEEQKnI0TQFvA53rPQMU44hMF-DgtPnae_q_1Oqc3XsxX-IE3xydmfIiBOWvmwhzlypGB4F52reVi8vKR_euQ1JqO6vcAMneUMWDaCqHw6CzarekVATU_i8706E3MrFXJLbk3fG6PuYrsLZx74PaLOue-FvaguCRbqbayl918yjKe-U_nngQviEa5vR54ecWDFEAfvbEUbx9LYp1Vb46GLOAWis15r1Lmn9LUzVK-1dH3691azHOh0aNSRGwaJQNycvlddg8Tn7tOMhpKsL_bkRsQ1CNdWWUO6hAO2Ou6zWT72gz0_INHG5s5DjONPdQqDqajo8RnuanDt9sjyqOgUdFzFxy-5RO70yQN3y4YWqKmRrINYX4iYOeOkFbV8uG4oF9pfdkUBClsRTJqhq5SWOvLJ1NGUIgQVtAOvPsa1wO1TJGN9b-h79bfgY_S-L2LDPVJMCJkZhbcF0XeRFs8T_nA306mV7oNOq0yoZPxRY8sa73oXJcIn4iMFgMT8mN2Ne-iENdapF3jG_LeD880QC0GJxQBTffyeSBBFru=w763-h724-no?authuser=0'
+      img: "/images/homemade.png"
     }
   ]
   return (

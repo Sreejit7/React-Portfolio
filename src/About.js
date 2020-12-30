@@ -93,8 +93,8 @@ function About() {
           <div className="contact__info">
             <motion.img
               className = "contact__img"
-              src = "https://lh3.googleusercontent.com/wkZtmHmGKWKhQMZbUJsNEmr6arY3jjbfeCrPWXQlDfA_6yQ6nEZhf6PCPVCNOF-8TZegzSLZpCxNdtsikD9J9_jmrealrmolQgOssFrnitMguQBt0rfy10WSw9rGIp2KbOHGj1RpwI8fNyif_1pH5KqsZDekbQnyi5U8WoJA7WIDNMMjNtDUvceIGIT0tA7BpinHJxue_1d50uIfnhGS89gPHGqSVowc7Ob6Or9cNEsUqmMIyqnjHfZh5MhkqHZw9nF5gd2vD80YZSvfxajkQNexQ7iyYmiHr0c_PLqiMk1oUeUhGI88eHM9PQFofcWQaJEslKfHbrWLgj5Vzk7Uhn4adsmAHWzfBUawne1vlyUNj38KgdLweI1WVThuJyOz_1nxLN7blDlr6lZx3ZM3FYFAVr5BIVloRTQUvr9rcHNZHoBcKaFKTuug3_0i-YYxPOof9OKAT7GpXk6pQzV__qqE6OhkD2Lf7g6hAqYo_UAAbtE7be3q1uoqWfkYFeHEa9YnsDVmvFS01AzuCLEI2FEKI7eZ1NY-twsCrTXJ1fxvZFSVjFblLqE7r9Suer2s9Up4heY0V6gOHfJeXS1g8OAXKRkZ659nh-rZWsr4DVMKYq2OW2_2IKjYvrNZPP9vxdvkkve2v-v_NtyT3G_4P0Dty_Me3AcxpgP3T9fzLslN-P9WCEEDKLzhVEMZ=w506-h507-no?authuser=0"
-              alt = ""
+              src = "/images/Sreejit De.jpeg"
+              alt = "Sreejit De"
             />
             <div className="contact__infoLines">
               <div className="contact__infoLine">
