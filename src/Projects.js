@@ -26,7 +26,7 @@ function Projects() {
     <div className = "project" id = "project">
       <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
       <div className="project__title">
-        <h1>Some of my works</h1>
+        <h1>PROJECTS</h1>
         <i class="em em-male-office-worker" aria-role="presentation" aria-label=""></i>
       </div>
       <div className="project__container">

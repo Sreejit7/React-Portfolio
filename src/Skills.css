@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap');
+.skills{
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  padding-bottom: 10vh;
+  min-height: 80vh;
+}
+.skill__title{
+  color: #fff;
+  font-family: 'Cinzel Decorative', cursive;
+  margin-bottom: 40px;
+}
+.skill__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80vw;
+  margin-bottom: 40px;
+}
+.skill__item{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 180px;
+  width: 180px;
+  padding: 20px;
+  margin-right: 20px;
+  background-color: rgba(240, 248, 255, 0.062);
+  position: relative;
+  border-radius: 10px;
+  padding-bottom: 2px;
+  box-shadow: 2px 2px 2px 0px #ffffff6e;
+}
+.skill__item:hover{
+  transform: scale(1.1);
+}
+.skill__item h2{
+  color: #fff;
+}
+.skill-icon{
+  font-size: 5rem;
+  margin: auto;
+}
+.react-icon{
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+.skillbar{
+  position: absolute;
+  bottom: 1px;
+  width: 98%;
+  background: #051129;
+  height: 8px;
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px #483d86ee;
+}
+.skillbar span{
+  background: rgb(245,228,8);
+  background: -moz-linear-gradient(90deg, rgba(245,228,8,1) 8%, rgba(225,240,51,1) 39%, rgba(24,238,19,1) 81%, rgba(6,207,3,1) 97%);
+  background: -webkit-linear-gradient(90deg, rgba(245,228,8,1) 8%, rgba(225,240,51,1) 39%, rgba(24,238,19,1) 81%, rgba(6,207,3,1) 97%);
+  background: linear-gradient(90deg, rgba(245,228,8,1) 8%, rgba(225,240,51,1) 39%, rgba(24,238,19,1) 81%, rgba(6,207,3,1) 97%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f5e408",endColorstr="#06cf03",GradientType=1);
+  height: 8px;
+  border-radius: 10px;
+  float: left;
+}
+@media (max-width: 768px){
+  .skill__title h1{
+    font-size: 1.5rem;
+  }
+}

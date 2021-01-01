@@ -43,8 +43,16 @@ function Header({toggle, onToggle, section, refs}) {
           <h2>About Me</h2>
         </Link>
         <Link 
+          smooth to = '#skill' 
+          className = {`header__link ${section === "skill" && "link-selected"}`}
+
+        >
+          <h2>Skills</h2>
+        </Link>
+        <Link 
           smooth to = '#project' 
           className = {`header__link ${section === "project" && "link-selected"}`}
+          
         >
           <h2>Projects</h2>
         </Link>

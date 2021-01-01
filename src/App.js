@@ -12,6 +12,7 @@ import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
+import Skills from './Skills';
 
 
 function App() {
@@ -22,15 +23,18 @@ function App() {
   const aboutRef = useRef(null);
   const projectRef = useRef(null);
   const contactRef = useRef(null);
+  const skillRef = useRef(null);
   const sectionRefs = [
     { section: "about", ref: aboutRef },
     { section: "project", ref: projectRef },
     { section: "contact", ref: contactRef },
+    {section: "skill", ref: skillRef}
   ];
   const refs = {
     about: {aboutRef},
     project: {projectRef},
-    contact: {contactRef}
+    contact: {contactRef},
+    skill: {skillRef}
   };
   useEffect(() => {
     document.title = "Sreejit De  💻";
@@ -99,22 +103,25 @@ function App() {
             transition = {{type: "tween", delay: 0.25, duration: 0.5}}
           > 
             <div className="intro__details">
+              <div className="intro-line1">
               <motion.h1 
-                style = {{fontSize: 35, marginLeft: 10}} 
-              >Hello, I'm</motion.h1>
-              <motion.h1 style = {{fontSize: 70, marginLeft: 10}}>Sreejit De.</motion.h1>
+                style = {{fontSize: 35, marginRight: 10}} 
+              >Hey there!</motion.h1> <i class="em-svg em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
+              <h1 style = {{marginLeft: '10px'}}>I'm</h1>
+              </div>
+              <div className="intro-line2">
+                <motion.h1 style = {{fontSize: 90, marginLeft: 10}}>Sreejit De.</motion.h1>
+              </div>
+              
               <motion.p 
                 className = "intro__desc"
-                animate = {{y: 20}}
+                animate = {{y: 0}}
               >
-                <span>I'm a final year Bachelor of Technology student in Computer Science & Technology. </span> <br/>
-                <span>I have immense interest in Problem Solving & Web Development. </span><br/> 
-                <span>I love learning new technologies, building new websites & improving my skills.</span><br/>
-                Currently looking for SDE internship and/or Full-time roles! <br/>
-                <span><b style = {{marginRight: '10px',marginTop: '10px'}}>Welcome to my website!</b><i class="em em-smile" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND SMILING EYES"></i></span>
+                <b style = {{marginRight: '10px', fontSize: '25px'}}>Welcome to my space!</b>
+                <i class="em em-smile" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND SMILING EYES"></i>
               </motion.p>
             </div>
-            <div className="intro__icons">
+            {/*<div className="intro__icons">
               <IconButton>
               <ExternalLink href = 'https://github.com/Sreejit7'>
                 <GitHub fontSize = "large" className = {`gh-icon ${!isToggled && "light"}`}/>
@@ -126,12 +133,18 @@ function App() {
                 </ExternalLink>
               </IconButton>
               
-            </div>  
+            </div>*/}
           </motion.div>
         </div>
       </div>
       <div className = 'about__section' ref = {aboutRef}>
       <About />
+      </div>
+      <div className="skills__section" ref = {skillRef}>
+      <Skills/>
+      </div>
+      <div className="coffee__break">
+        
       </div>
       <div className = 'projects__section' ref = {projectRef}>
       <Projects/>

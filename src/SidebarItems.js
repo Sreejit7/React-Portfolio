@@ -4,6 +4,10 @@ export const sidebarItems = [
     link: '#about',
   },
   {
+    name: 'SKILLS',
+    link: '#skill'
+  },
+  {
     name: 'PROJECTS',
     link: '#project',
   },

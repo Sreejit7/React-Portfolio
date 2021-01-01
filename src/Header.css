@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
 .header{
   background: transparent;
   position: sticky;
@@ -21,9 +22,9 @@
   color: rgb(3, 1, 27);
 }
 .header h2{
-  font-weight: 500;
   font-size: 20px;
   text-align: center;
+  font-family: 'Quicksand', sans-serif;
 }
 .header h2:hover{
   font-weight: bolder;
@@ -58,7 +59,9 @@
   color: #fff;
 }
 .header-scroll{
-  background-color: rgba(0, 0, 0, 0.904);
+  background-color: rgba(56, 55, 55, 0.562);
+  backdrop-filter: blur(10px);
+
 }
 .sidebar__icon{
   color: #fff;

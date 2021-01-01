@@ -28,50 +28,27 @@ function About() {
       grades: "93%"
     }
   ];
-  const skills= [
+  
+  const about = [
     {
-      name: "C++",
-      eff: "90%"
+      q: "Introduction",
+      a: `I'm a Final Year B.Tech Student in Computer Science from Tamluk, India. 
+          I love problem solving and web development. 
+          I'm always looking forward to learn new technologies and evolving my skills constantly.
+          Currently learning JavaScript & Mongo DB!`
     },
     {
-      name: "Java",
-      eff: "85%"
+      q: "My Coding Journey",
+      a:  `I'm one of those who never coded before college and started really late.
+          (Better late than never!)
+          The first language I was introduced to at my college was C. I know coding can be equally fun and frustrating at times,
+          but when it works, that gives me great inner joy! 
+          The world of programming is a never-ending ocean, and I hope to explore it a lil deeper a day.`,
     },
     {
-      name: "C",
-      eff: "75%"
-    },
-    {
-      name: "React JS",
-      eff: "75%",
-    },
-    {
-      name: "CSS",
-      eff: "75%"
-    },
-    {
-      name: "JavaScript",
-      eff: "50%"
-    },
-    {
-      name: "SQL",
-      eff: "70%"
-    },
-    {
-      name: "GIT",
-      eff: "65%"
-    }
-  ];
-  const hobbies = [
-    {
-      name: "Watching Football",
-      desc: "I'm a die-hard Real Madrid fan. When Madrid is playing, I'm always watching.",
-      icon: <i class="em em-soccer" aria-role="presentation" aria-label="SOCCER BALL"></i>
-    },
-    { 
-      name: "Painting",
-      desc: "Whenever I get time, I love putting colours on things which otherwise seem dull.",
-      icon: <i class="em em-art" aria-role="presentation" aria-label="ARTIST PALETTE"></i>
+      q: "When I'm not hustling...",
+      a: `I love watching football. The art of football mesmerizes me a lot.. 
+          Other than that, I like putting colours on things which otherwise seem dull i.e. painting!`
     }
   ]
   const resumeDownload = () => {
@@ -79,109 +56,138 @@ function About() {
   }
   return (
     <motion.div className = "about" id = "about">
-      <motion.div className="about__left"
-        initial = {{x: '-100vw'}}
-        animate = {{x: 0}}
-        transition = {{type: "spring", stiffness: 150, duration: 1.5}}
-      >
-        <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
-        <div className="about__contact">
-          <div className="about__title">
-            <h1>You can reach me on</h1>
-            <i class="em em-earth_asia" aria-role="presentation" aria-label="EARTH GLOBE ASIA-AUSTRALIA"></i>
+      <div className="about__header">
+          <h1>ABOUT ME</h1>
+          <div className="about__area">
+              <img
+                alt = ""
+                src = "/images/coding.gif"
+                className = "about__img"
+              />
+            
+            <div className="about__desc">           
+              {about.map((item) => (
+                <div className="about__item">
+                  <h2><span className = "arrow-highlight">{item.q}</span></h2>
+                  <p>{item.a}</p>
+                </div>
+              ))}
+            </div>
+            <img
+                alt = ""
+                src = "/images/coffee.png"
+                className = "about__img2"
+              />
           </div>
-          <div className="contact__info">
-            <motion.img
-              className = "contact__img"
-              src = "/images/Sreejit De.jpeg"
-              alt = "Sreejit De"
-            />
-            <div className="contact__infoLines">
-              <div className="contact__infoLine">
-              <Mail fontSize = "large" className = "contact__icon"/>
-              <p>sreejitde7@gmail.com</p>
-            </div>
-            <div className="contact__infoLine" >
-              <Phone fontSize = "large" className = "contact__icon"/>
-              <p>+91 9002198484</p>
-            </div>
-            <div className="contact__infoLine">
-              <Home fontSize = "large" className = "contact__icon"/>
-              <p>Tamluk, West Bengal, India</p>
-            </div>
-            </div>
-          </div>
-        </div>
-        <div className="education">
+          
+          
+      </div>
+      <div className="about__body">
+        {/*<motion.div className="about__left"
+          initial = {{x: '-100vw'}}
+          animate = {{x: 0}}
+          transition = {{type: "spring", stiffness: 150, duration: 1.5}}
+        >
+          <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
+          <div className="about__contact">
             <div className="about__title">
-              <h1>Got My Degrees From</h1>
-              <i class="em em-school" aria-role="presentation" aria-label="SCHOOL"></i>
+              <h1>You can reach me on</h1>
+              <i class="em em-earth_asia" aria-role="presentation" aria-label="EARTH GLOBE ASIA-AUSTRALIA"></i>
             </div>
-            {institues.map((item) => (
-              <motion.div className = "institutes">
-                <h2>{item.name}</h2> 
-                <em>{item.place}</em>
-                <h3>{item.course}</h3>
-                <em>{item.timeline}</em>
-                <h4>{item.grades}</h4>
-              </motion.div>
-            ))}
-        </div>
-      </motion.div>
+            <div className="contact__info">
+              <motion.img
+                className = "contact__img"
+                src = "/images/Sreejit De.jpeg"
+                alt = "Sreejit De"
+              />
+              <div className="contact__infoLines">
+                <div className="contact__infoLine">
+                <Mail fontSize = "large" className = "contact__icon"/>
+                <p>sreejitde7@gmail.com</p>
+              </div>
+              <div className="contact__infoLine" >
+                <Phone fontSize = "large" className = "contact__icon"/>
+                <p>+91 9002198484</p>
+              </div>
+              <div className="contact__infoLine">
+                <Home fontSize = "large" className = "contact__icon"/>
+                <p>Tamluk, West Bengal, India</p>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div className="education">
+              <div className="about__title">
+                <h1>Got My Degrees From</h1>
+                <i class="em em-school" aria-role="presentation" aria-label="SCHOOL"></i>
+              </div>
+              {institues.map((item) => (
+                <motion.div className = "institutes">
+                  <h2>{item.name}</h2> 
+                  <em>{item.place}</em>
+                  <h3>{item.course}</h3>
+                  <em>{item.timeline}</em>
+                  <h4>{item.grades}</h4>
+                </motion.div>
+              ))}
+          </div>
+        </motion.div>
 
 
-      <motion.div className="about__right"
-        initial = {{x: '100vw'}}
-        animate = {{x: 0}}
-        transition = {{type: "spring", stiffness: 150, duration: 1.5}}
-      >
-        <div className="skills">
-          <div className="about__title">
-            <h1>I Know A Few Things About</h1>
-            <i class="em em-male-technologist" aria-role="presentation" aria-label=""></i>
-          </div>
-          <motion.div
-            className = "skill__bars"
-          >
-          {skills.map((skill) => (
-            <div>
-            <h3>{skill.name}</h3>
-            <span className = "skillbar"><span style = {{width: skill.eff}}></span></span>
+        <motion.div className="about__right"
+          initial = {{x: '100vw'}}
+          animate = {{x: 0}}
+          transition = {{type: "spring", stiffness: 150, duration: 1.5}}
+        >
+          <div className="skills">
+            <div className="about__title">
+              <h1>I Know A Few Things About</h1>
+              <i class="em em-male-technologist" aria-role="presentation" aria-label=""></i>
             </div>
-          ))}
-          </motion.div>
-        </div>
-        <div className="hobbies">
-          <div className="about__title">
-           <h1>When I'm not hustling</h1>
-           <i class="em em-man-getting-massage" aria-role="presentation" aria-label=""></i>
-          </div>
-          <h4>I'm probably doing one of these things</h4>
-          <motion.div
-            className = "hobbies__list"
-          >
-            {hobbies.map((hobby) => (
-              <div className = "hobby__item">
-              <div className="hobby__name">
-                <h2>{hobby.name}</h2><span>{hobby.icon}</span>
-              </div>
-              
-              <p>{hobby.desc}</p>
+            <motion.div
+              className = "skill__bars"
+            >
+            {skills.map((skill) => (
+              <div>
+              <h3>{skill.name}</h3>
+              <span className = "skillbar"><span style = {{width: skill.eff}}></span></span>
               </div>
             ))}
-          </motion.div>
-        </div>
-        <div className = "resume">
-          <motion.button
-            className = "resume__download"
-            onClick = {resumeDownload}
-          >RESUME
-          </motion.button>
-          <IconButton onClick = {resumeDownload}>
-          <GetApp fontSize = "large" className = "resume-icon"/>
-          </IconButton>
-        </div>
-      </motion.div>
+            </motion.div>
+          </div>
+          <div className="hobbies">
+            <div className="about__title">
+            <h1>When I'm not hustling</h1>
+            <i class="em em-man-getting-massage" aria-role="presentation" aria-label=""></i>
+            </div>
+            <h4>I'm probably doing one of these things</h4>
+            <motion.div
+              className = "hobbies__list"
+            >
+              {hobbies.map((hobby) => (
+                <div className = "hobby__item">
+                <div className="hobby__name">
+                  <h2>{hobby.name}</h2><span>{hobby.icon}</span>
+                </div>
+                
+                <p>{hobby.desc}</p>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+          <div className = "resume">
+            <motion.button
+              className = "resume__download"
+              onClick = {resumeDownload}
+            >RESUME
+            </motion.button>
+            <IconButton onClick = {resumeDownload}>
+            <GetApp fontSize = "large" className = "resume-icon"/>
+            </IconButton>
+          </div>
+        </motion.div>*/}
+      
+      </div>
       
       
     </motion.div>

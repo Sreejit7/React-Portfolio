@@ -17,7 +17,7 @@ function Footer() {
         <ExternalLink href = 'https://github.com/Sreejit7'><GitHub fontSize = "large" className = "icon-footer"/></ExternalLink>
         <ExternalLink href = 'https://www.linkedin.com/in/sreejit-de-64a84b190/'><LinkedIn fontSize = "large" className = "icon-footer"/></ExternalLink>
       </div>
-      <span>All rights reserved &#x24B8; 2020</span>
+      <span>All rights reserved &#x24B8; 2021</span>
     </div>
   )
 }

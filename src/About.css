@@ -1,7 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Ranga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap');
 .about{
   display: flex;
+  flex-direction: column;
   padding-top: 10vh;
   padding-bottom: 10vh;
+}
+.about__header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5vh;
+}
+.about__header h1{
+  color: rgb(250, 245, 235);
+  margin-bottom: 30px;
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 35px;
+}
+.about__area{
+  display: flex;
+}
+.about__img{
+  width: 25vw;
+  object-fit: contain;
+  left: -10px;
+}
+.about__img2{
+  width: 18vw;
+  object-fit: contain;
+  margin: auto;
+}
+.about__desc{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url('about-bg.png');
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px 0px rgb(241, 241, 241);
+  max-width: 50vw;
+  margin-right: 30px;
+}
+.about__item{
+  margin-left: 40px;
+  line-height: 1.4;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.about__item h2{
+  position:relative;
+  z-index: 2;
+  margin-bottom: 5px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
+  font-weight: 800;
+  width: fit-content;
+  margin:0 0.5em;
+  padding:0 0.2em;
+}
+.about__item h2:before{
+  content:"";
+  z-index:-1;
+  left:-0.5em;
+  top:0.1em;
+  border-width:0.5em;
+  border-style:solid;
+  border-color:rgba(255, 38, 0, 0.589);
+  position:absolute;
+  width:calc(100% - 0.5em);
+  border-left-color:transparent;
+}
+.about__item h2:after{
+  content:"";
+  z-index:-1;
+  right:0;
+  top:0.1em;
+  border-width:0.5em;
+  border-style:solid;
+  border-color:rgba(255, 38, 0, 0.589);
+  position:absolute;
+  border-top-color:transparent;
+  border-bottom-color:transparent;
+  border-left-color:transparent;
+  transform:rotate(180deg);
+  transform-origin:center right;
+}
+.about__item p{
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Ranga', cursive;
+  font-size: 1.5rem;
+}
+
+.about__body{
+  display: flex;
 }
 .about__left{
   flex: 0.5;
@@ -42,50 +140,7 @@
   margin-bottom: 15px;
   width: 90%;
 }
-.about__contact{
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.contact__info{
-  cursor: pointer;
-  display: flex;
-  width: 100%;
-  border-radius: 20px;
-  color: rgb(10, 10, 10);
-  box-shadow: 2px 5px 5px 0px rgb(7, 1, 41);
-  padding: 15px;
-  line-height: 2;
-  /*border: 0.25px solid #fff;*/
-  margin-bottom: 20px;
-  background-color: rgba(236, 239, 240, 0.945);
-  font-size: larger;
-  font-weight: bold;
-  
-}
-.contact__infoLines{
-  display: flex;
-  flex-direction: column;
-  margin-left: 15px;
-  justify-content: center;
-}
-.contact__infoLine{
-  display: flex;
-  padding: 10px;
-}
-.contact__icon{
-  color: rgb(5, 5, 5);
-  margin-right: 15px;
-  left: 35;
-}
-.contact__img{
-  width: 200px;
-  object-fit: contain;
-  border-radius: 15px;
-  box-shadow: 5px 8px 8px 0px rgba(68, 68, 68, 0.521);
-}
+
 .institutes h2, h3, h4, em{
   margin-bottom: 5px;
   margin-top: 5px;
@@ -98,12 +153,12 @@
   align-items: center;
   justify-content: center;
 }
-.skills{
+/*.skills{
   cursor: pointer;
   display: flex;
   flex-direction: column;
   width: 90%;
-}
+}*/
 
 .skill__bars{
   padding: 30px;
@@ -224,7 +279,7 @@
   }
 }
 @media(max-width: 850px){
-  .about{
+  .about__body{
     flex-direction: column;
   }
   .about__contact, .education{
