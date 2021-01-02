@@ -40,9 +40,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 60px;
 }
 
-.link-selected > h2{
+.link-selected{
+  
+  border-bottom: 3px solid rgb(250, 172, 26);
+}
+.link-selected h2{
   color: rgb(250, 172, 26);
 } 
 

@@ -108,7 +108,7 @@ function App() {
               <h1 style = {{marginLeft: '10px'}}>I'm</h1>
               </div>
               <div className="intro-line2">
-                <motion.h1>Sreejit De.</motion.h1>
+                <motion.h1>Sreejit De<span className = "dot">.</span></motion.h1>
               </div>
               
               <motion.p 
