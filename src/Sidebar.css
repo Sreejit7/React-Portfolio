@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 .close__icon{
-  color: #fff;
+  color: rgb(255, 192, 56);
   margin-right: 10px;
+  position: absolute;
+  top: 50px;
+  left: 20px;
 }
 .sidebar__menu{
   width: 100%;
@@ -36,9 +40,10 @@
   list-style: none;
   height: 80px;
   width: 100vw;
+  font-family: 'Fredoka One', cursive;
 }
 .sidebar__text a{
-  color: #fff;
+  color: rgb(245, 166, 47);
   text-decoration: none;
   font-size: 16px;
   width: 100%;
@@ -49,7 +54,7 @@
   border-radius: 4px;
 }
 .sidebar__text a:hover{
-  color: #e4a216;
+  color: #ee8814;
   background-color: rgba(255, 255, 255, 0.048);
 }
 .sidebar__toggle{

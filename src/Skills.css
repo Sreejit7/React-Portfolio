@@ -80,12 +80,14 @@
   border-radius: 10px;
   float: left;
 }
+@media(max-width: 990px){
+  .skill__row{
+    flex-direction: column;
+  }
+}
 @media (max-width: 768px){
   .skill__title h1{
     font-size: 1.5rem;
-  }
-  .skill__row{
-    flex-direction: column;
   }
   .skill__item{
     transform: scale(0.9);

@@ -140,6 +140,14 @@
   color: #fff;
   animation: jumping 0.5s ease infinite;
 }
+.bottom-icon{
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  animation: jumping .5s ease infinite;
+  opacity: 0;
+}
 .visible{
   opacity: 0.75;
 }

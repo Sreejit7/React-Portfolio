@@ -4,6 +4,7 @@ import Header from './Header';
 import {motion} from 'framer-motion';
 import {getDimensions} from './util';
 import IconButton from '@material-ui/core/IconButton';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {GitHub, LinkedIn} from '@material-ui/icons';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import {ExternalLink} from 'react-external-link';
@@ -19,6 +20,7 @@ function App() {
   const [isToggled, setIsToggled] = useState(true);
   const [visibleSection, setVisibleSection] = useState();
   const [topButton, setTopButton] = useState(false);
+  const [downButton, setDownButton] = useState(true);
   const headerRef = useRef(null);
   const aboutRef = useRef(null);
   const projectRef = useRef(null);
@@ -47,6 +49,12 @@ function App() {
       }
       else{
         setTopButton(false);
+      }
+      if(window.scrollY >= 10){
+        setDownButton(false);
+      }
+      else{
+        setDownButton(true);
       }
     };
     handleToTop();
@@ -132,8 +140,13 @@ function App() {
               </IconButton>
               
             </div>*/}
+            
+
           </motion.div>
         </div>
+        <HLink smooth to = "#about" className = {`bottom-icon ${downButton && "visible"}`}>
+          <ExpandMoreIcon fontSize = "large"/>
+        </HLink>
       </div>
       <div className = 'about__section' ref = {aboutRef}>
       <About />
