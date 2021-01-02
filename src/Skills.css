@@ -3,7 +3,6 @@
   padding-top: 10vh;
   display: flex;
   flex-direction: column;
-  
   align-items: center;
   padding-bottom: 10vh;
   min-height: 80vh;
@@ -12,6 +11,13 @@
   color: #fff;
   font-family: 'Cinzel Decorative', cursive;
   margin-bottom: 40px;
+}
+.skill__area{
+  display: flex;
+  flex-direction: column;
+}
+.skill__row{
+  display: flex;
 }
 .skill__container{
   display: flex;
@@ -77,5 +83,23 @@
 @media (max-width: 768px){
   .skill__title h1{
     font-size: 1.5rem;
+  }
+  .skill__row{
+    flex-direction: column;
+  }
+  .skill__item{
+    transform: scale(0.9);
+  }
+}
+@media (max-width: 450px){
+  .skill__container{
+    max-width: 90vw;
+    margin: auto;
+  }
+  .skill__item{
+    transform: scale(0.8);
+  }
+  .skill__item h2{
+    font-size: 1.2rem;
   }
 }

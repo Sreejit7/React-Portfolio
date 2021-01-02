@@ -27,6 +27,7 @@
   width: 25vw;
   object-fit: contain;
   left: -10px;
+  margin: auto;
 }
 .about__img2{
   width: 18vw;
@@ -277,6 +278,9 @@
     font-size: 1rem;
     font-weight: 500;
   }
+  .about__area{
+    flex-direction: column;
+  }
 }
 @media(max-width: 850px){
   .about__body{
@@ -293,6 +297,19 @@
   }
   .skillbar, .skillbar span{
     height: 12px;
+  }
+  .about__desc{
+    max-width: 80vw;
+    margin: auto;
+  }
+  .about__item{
+    margin-left: 10px;
+  }
+  .about__img{
+    margin-bottom: 10px;
+  }
+  .about__img2{
+    margin-top: 20px;
   }
 }
 @media(max-width: 600px){

@@ -60,7 +60,7 @@
 }
 .header-scroll{
   background-color: rgba(56, 55, 55, 0.562);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
 
 }
 .sidebar__icon{

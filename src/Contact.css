@@ -128,7 +128,7 @@
 .contact__infoLines{
   display: flex;
   flex-direction: column;
-  margin-left: 15px;
+  align-items: center;
   justify-content: center;
 }
 .contact__infoLine{
@@ -182,12 +182,16 @@
 }
 @media (max-width: 768px){
   .contact__container{
-    width: 100%;
+    max-width: 85vw;
+    flex-direction: column;
   }
   .form__input, .contact__form textarea{
     width: 70%;
   }
   .contact__title h1, .contact__header h1{
     font-size: 1.5rem;
+  }
+  .contact__infoLine p{
+    font-size: 1.1rem;
   }
 }

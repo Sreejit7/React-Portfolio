@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 .app__body{
   background: rgb(250,244,245);
   background: linear-gradient(180deg, rgba(250,244,245,1) 4%, rgba(153,187,187,1) 45%, rgba(103,179,214,1) 76%, rgba(43,143,201,1) 99%);
@@ -25,6 +27,10 @@
   align-items: center;
   justify-content: center;
   padding: 10px;
+}
+.intro-line2 h1{
+  font-size: 90px;
+  margin-left: 10px;
 }
 .app__intro{
   display: flex;
@@ -57,7 +63,7 @@
   z-index: 1;
 }
 .intro__left h1{
-  font-family:'Segoe UI', sans-serif;
+  font-family: 'Righteous', cursive;
   text-align: center;
   text-shadow: 1px 1px 5px 1px rgb(1, 8, 20);
 }
@@ -70,7 +76,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+  margin-top: 20px;
 }
 .intro__right{
   flex: 0;
@@ -87,6 +93,7 @@
   word-spacing: 3px;
   line-height: 1.6;
   text-align: center;
+  font-family: 'Caveat', cursive;
 }
 .intro__img{
   width: 400px;
@@ -161,5 +168,11 @@
 @media(max-width: 450px){
   .app__switch{
     transform: translate(-80vw, 20%);
+  }
+  .intro__details, .intro__left{
+    transform: scale(0.8);
+  }
+  .intro__left{
+    max-width: 100%;
   }
 }

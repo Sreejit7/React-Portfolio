@@ -95,11 +95,9 @@ function App() {
       <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
         <div className="app__intro__body">
           <motion.div className = {`intro__left ${!isToggled && "light"}`}
-            /*initial = {{y: '-100vh'}}
-            animate = {{y: 30}}  */
             
             initial = {{zoom: 0.25, opacity: 0, y: 0}}
-            animate = {{zoom: 1, opacity: 1, y: 30}}
+            animate = {{zoom: 1, opacity: 1, y: 40}}
             transition = {{type: "tween", delay: 0.25, duration: 0.5}}
           > 
             <div className="intro__details">
@@ -110,14 +108,14 @@ function App() {
               <h1 style = {{marginLeft: '10px'}}>I'm</h1>
               </div>
               <div className="intro-line2">
-                <motion.h1 style = {{fontSize: 90, marginLeft: 10}}>Sreejit De.</motion.h1>
+                <motion.h1>Sreejit De.</motion.h1>
               </div>
               
               <motion.p 
                 className = "intro__desc"
                 animate = {{y: 0}}
               >
-                <b style = {{marginRight: '10px', fontSize: '25px'}}>Welcome to my space!</b>
+                <b style = {{marginRight: '10px', fontSize: '35px'}}>Welcome to my space!</b>
                 <i class="em em-smile" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND SMILING EYES"></i>
               </motion.p>
             </div>
