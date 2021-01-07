@@ -305,6 +305,10 @@
   .about__item{
     margin-left: 10px;
   }
+  .about__item h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
   .about__img{
     margin-bottom: 10px;
   }
