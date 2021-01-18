@@ -40,7 +40,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url('about-bg.png');
+  background: rgb(255,244,99);
+  background: linear-gradient(180deg, rgba(255,244,99,1) 0%, rgba(252,235,82,1) 20%, rgba(244,181,27,1) 100%);
   background-position: center;
   background-size: cover;
   padding: 20px;
@@ -48,6 +49,8 @@
   box-shadow: 4px 4px 2px 0px rgb(241, 241, 241);
   max-width: 50vw;
   margin-right: 30px;
+  border-bottom: 0.25px solid black;
+  border-right: 0.25px solid black;
 }
 .about__item{
   margin-left: 40px;
