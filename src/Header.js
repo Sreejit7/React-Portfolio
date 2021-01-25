@@ -56,7 +56,7 @@ function Header({toggle, onToggle, section, refs}) {
         >
           <h2>Projects</h2>
         </Link>
-        <ExternalLink href = 'https://drive.google.com/file/d/1nln2EHepkQEKQfRpl0nOWjyI2TH_foD7/view?usp=sharing' className = "header__link">
+        <ExternalLink href = 'https://drive.google.com/file/d/13iHHh90A9cHyQ7qwog8W_8wGedgRRhVy/view?usp=sharing' className = "header__link">
           <h2>Resume</h2>
         </ExternalLink>
         <Link 
