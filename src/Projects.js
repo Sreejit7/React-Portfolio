@@ -20,7 +20,15 @@ function Projects() {
       url: "https://github.com/Sreejit7/Ecommerce-website",
       gh: "https://github.com/Sreejit7/Ecommerce-website",
       img: "/images/homemade.png"
-    }
+    },
+    {
+      name: "HEADLINER",
+      desc: "HEADLINER is a news website displaying the top 10 breaking news headlines all over the world. You can check out the top 10 headlines for any specific topic you want as well.",
+      tech: ["React JS", "GNews API"],
+      url: 'https://headliner.netlify.app/',
+      gh: 'https://github.com/Sreejit7/React-Newsapp',
+      img: "/images/headliner-ss.png"
+    },
   ]
   return (
     <div className = "project" id = "project">
