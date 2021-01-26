@@ -12,17 +12,18 @@
 }
 .project__container{
   display: flex;
+  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: space-evenly;
   padding: 10px;
   margin-top: 20px;
   color: #fff;
-  width: 95vw;
-  overflow-x: scroll;
+  /* width: 95vw; */
+  /* overflow-x: scroll; */
 }
 .project__item{
   height: 520px;
-  width: 500px;
+  width: 300px;
   padding: 20px;
   background-color: rgba(144, 78, 206, 0.712);
   box-shadow: 2px 2px 2px 0px rgba(216, 216, 219, 0.932);
@@ -87,8 +88,9 @@
 .project__item:nth-of-type(even) .gh-icon-project:hover{
   color: #fff;
 }
-::-webkit-scrollbar {
-  width: 10px;
+
+::-webkit-scrollbar{
+  width: 10px !important;
 } 
 /* Track */
 ::-webkit-scrollbar-track {
@@ -127,5 +129,10 @@
   .project__item{
     width: 80vw;
     height: fit-content;
+  }
+}
+@media(min-width: 600px){
+  .project__container{
+    flex-wrap: wrap;
   }
 }

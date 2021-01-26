@@ -146,6 +146,26 @@
 .visible{
   opacity: 0.75;
 }
+::-webkit-scrollbar{
+  width: 10px !important;
+} 
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(107, 50, 199);
+  background: linear-gradient(180deg, rgb(127, 46, 202) 0%, rgb(50, 94, 214) 46%, rgba(8,156,255,1) 100%);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(142, 115, 163);
+}
 @keyframes jumping{
   from{
     transform: translateY(0.5px);
