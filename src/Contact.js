@@ -68,10 +68,10 @@ function Contact() {
             <h1>Drop A Message or Say Hi!</h1>
             <i class="em-svg em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
           </div>
-          <input type = "text" placeholder = "Type your name" className = "form__input" name = "name"/>
-          <input type = "email" placeholder = "Type your email" className = "form__input" name = "email"/>
+          <input type = "text" placeholder = "Type your name" className = "form__input" name = "name" required/>
+          <input type = "email" placeholder = "Type your email" className = "form__input" name = "email" required/>
           <input type = "text" placeholder = "Type mail subject" className = "form__input" name = "subject"/>
-          <textarea rows = "5" type = "text" placeholder = "Type your message" name = "message"></textarea>
+          <textarea rows = "5" type = "text" placeholder = "Type your message" name = "message" required></textarea>
           <input className = "form__submit" type = "submit" value = "Send"/>
         </form>
       </div>
