@@ -4,6 +4,7 @@ import {IconContext} from 'react-icons';
 
 import './Skills.css';
 const Skills = () => {
+  // const skills = require('./data/skills.json');
   const skills= [
     {
       name: "C++",
@@ -54,46 +55,13 @@ const Skills = () => {
         <h1>SKILLS</h1>
       </div>
       <div className="skill__area">
-        <div className="skill__row">
-          <div className="skill__container">
-            {skills.map((skill) => (
+        {skills.map((skill) => (
               <div className="skill__item">
                 <h2>{skill.name}</h2>
                   {skill.icon}
                 <span className = "skillbar"><span style = {{width: skill.eff}}></span></span>
               </div>
-            )).slice(0,2)}
-          </div>
-          <div className="skill__container">
-            {skills.map((skill) => (
-              <div className="skill__item">
-                <h2>{skill.name}</h2>
-                  {skill.icon}
-                <span className = "skillbar"><span style = {{width: skill.eff}}></span></span>
-              </div>
-            )).slice(2,4)}
-          </div>
-        </div>
-        <div className="skill__row">
-          <div className="skill__container">
-            {skills.map((skill) => (
-              <div className="skill__item">
-                <h2>{skill.name}</h2>
-                  {skill.icon}
-                <span className = "skillbar"><span style = {{width: skill.eff}}></span></span>
-              </div>
-            )).slice(4,6)}
-          </div>
-          <div className="skill__container">
-            {skills.map((skill) => (
-              <div className="skill__item">
-                <h2>{skill.name}</h2>
-                  {skill.icon}
-                <span className = "skillbar"><span style = {{width: skill.eff}}></span></span>
-              </div>
-            )).slice(6,8)}
-          </div>
-        </div>
+            ))}
       </div>
       
       

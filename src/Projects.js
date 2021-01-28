@@ -4,32 +4,7 @@ import {GitHub} from '@material-ui/icons';
 import IconButton from '@material-ui/core/IconButton';
 import {ExternalLink} from 'react-external-link';
 function Projects() {
-  const projects = [
-    {
-      name: "COVID-CARE",
-      desc: "COVID-CARE is a website designed for tracking the COVID-19 pandemic data like deaths, cases & recoveries, upcoming vaccine informtion & top headlines related to COVID-19.",
-      tech: ["React JS", "disease.sh API", "GNews API"],
-      url: "https://covid-19care.web.app/",
-      gh: 'https://github.com/Sreejit7/COVID-care',
-      img: "/images/covid-care.png"
-    },
-    {
-      name: "HomeMade",
-      desc: "HomeMade is an e-commerce website designed for selling all kinds of homemade products from delicious foods to aesthetic artworks.",
-      tech: ["React JS", "Firebase", "Stripe Payments API"],
-      url: "https://github.com/Sreejit7/Ecommerce-website",
-      gh: "https://github.com/Sreejit7/Ecommerce-website",
-      img: "/images/homemade.png"
-    },
-    {
-      name: "HEADLINER",
-      desc: "HEADLINER is a news website displaying the top 10 breaking news headlines all over the world. You can check out the top 10 headlines for any specific topic you want as well.",
-      tech: ["React JS", "GNews API"],
-      url: 'https://headliner.netlify.app/',
-      gh: 'https://github.com/Sreejit7/React-Newsapp',
-      img: "/images/headliner-ss.png"
-    },
-  ]
+  const projects = require('./data/projects.json');
   return (
     <div className = "project" id = "project">
       <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
@@ -38,7 +13,7 @@ function Projects() {
         <i class="em em-male-office-worker" aria-role="presentation" aria-label=""></i>
       </div>
       <div className="project__container">
-        {projects.map((project) => (
+        {projects.projectItems.map((project) => (
           <div className="project__item">
             <h1 style = {{textAlign:"center"}}>{project.name}</h1>
             <div className="project__info">

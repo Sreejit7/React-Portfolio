@@ -1,0 +1,55 @@
+{
+  "skillItems" :
+  [
+    {
+      "name": "C++",
+      "eff": "90%",
+      "icon": "<SiCplusplus/>",
+      "color": "#2b5db1"
+    },
+    {
+      "name": "Java",
+      "eff": "85%",
+      "icon": "<SiJava/>",
+      "color" : "#f59508"
+    },
+    {
+      "name": "C",
+      "eff": "75%",
+      "icon": "<SiC/>",
+      "color" : "#6ab8c1"
+    },
+    {
+      "name": "React JS",
+      "eff": "75%",
+      "icon": "<SiReact />",
+      "color" : "#10e7e3",
+      "cName": "react-icon"
+    },
+    {
+      "name": "CSS",
+      "eff": "75%",
+      "icon": "<SiCss3/>",
+      "color" : "#0d44e2"
+    },
+    {
+      "name": "JavaScript",
+      "eff": "50%",
+      "icon": "<SiJavascript />",
+      "color" : "#f0e124"
+    },
+    {
+      "name": "SQL",
+      "eff": "70%",
+      "icon": "<SiMysql />",
+      "color" : "#a094eb"
+    },
+    {
+      "name": "GIT",
+      "eff": "65%",
+      "icon": "<SiGit />",
+      "color" : "#df432a"
+    }
+  ]
+  
+}
