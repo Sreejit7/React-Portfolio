@@ -10,7 +10,6 @@ function Projects() {
       <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
       <div className="project__title">
         <h1>PROJECTS</h1>
-        <i class="em em-male-office-worker" aria-role="presentation" aria-label=""></i>
       </div>
       <div className="project__container">
         {projects.projectItems.map((project) => (

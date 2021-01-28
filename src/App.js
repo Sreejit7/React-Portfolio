@@ -154,9 +154,6 @@ function App() {
       <div className="skills__section" ref = {skillRef}>
       <Skills/>
       </div>
-      <div className="coffee__break">
-        
-      </div>
       <div className = 'projects__section' ref = {projectRef}>
       <Projects/>
       </div>

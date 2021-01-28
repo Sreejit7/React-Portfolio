@@ -147,12 +147,14 @@
   opacity: 0.75;
 }
 ::-webkit-scrollbar{
-  width: 10px !important;
+  width: 8px !important;
+  background: rgb(3,15,41);
+  background: linear-gradient(180deg, rgba(3,15,41,1) 0%, rgba(21,4,46,1) 65%);
 } 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: transparent;
-
+  background: rgb(3,15,41);
+  background: linear-gradient(180deg, rgba(3,15,41,1) 0%, rgba(21,4,46,1) 65%);
 }
 
 /* Handle */

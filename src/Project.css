@@ -28,8 +28,7 @@
   background-color: rgba(144, 78, 206, 0.712);
   box-shadow: 2px 2px 2px 0px rgba(216, 216, 219, 0.932);
   border-radius: 15px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 20px;
 }
 .project__item:nth-of-type(even){
   background-color: rgba(70, 201, 162, 0.815);
