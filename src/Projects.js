@@ -3,10 +3,10 @@ import './Project.css';
 import {GitHub} from '@material-ui/icons';
 import IconButton from '@material-ui/core/IconButton';
 import {ExternalLink} from 'react-external-link';
-function Projects() {
+function Projects({className}) {
   const projects = require('./data/projects.json');
   return (
-    <div className = "project" id = "project">
+    <div className = {`${className} project`} id = "project">
       <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
       <div className="project__title">
         <h1>PROJECTS</h1>

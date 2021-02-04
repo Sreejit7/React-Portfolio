@@ -1,31 +1,69 @@
 import React,{useState, useRef, useEffect} from 'react';
 import './App.css';
-import Header from './Header';
 import {motion} from 'framer-motion';
 import {getDimensions} from './util';
 import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import {GitHub, LinkedIn} from '@material-ui/icons';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import {ExternalLink} from 'react-external-link';
 import {HashLink as HLink} from 'react-router-hash-link';
+import Header from './Header';
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
 import Skills from './Skills';
-
+import {lightTheme, darkTheme} from './theme';
+import styled, { ThemeProvider } from 'styled-components'
+import Toggle from './Toggle';
 
 function App() {
-  const [isToggled, setIsToggled] = useState(true);
   const [visibleSection, setVisibleSection] = useState();
   const [topButton, setTopButton] = useState(false);
   const [downButton, setDownButton] = useState(true);
+  const [theme, setTheme] = useState('dark');
   const headerRef = useRef(null);
   const aboutRef = useRef(null);
   const projectRef = useRef(null);
   const contactRef = useRef(null);
   const skillRef = useRef(null);
+
+
+  const StyledName = styled.div`
+    .intro-line2 h1{
+      text-shadow: ${({ theme }) => `3px 3px 5px ${theme.textShadow}`};
+    }
+  `
+  const TopButton = styled.div`
+    &.toTop {
+      background: ${({ theme }) => theme.topButtonBG};
+    }
+  `;
+  const StyledAbout = styled(About)`
+    background: ${({ theme }) => theme.oddSectionBG};
+    color: ${({ theme }) => theme.headers};
+  `;
+  const StyledSkills = styled(Skills)`
+    background:  ${({ theme }) => theme.evenSectionBG};
+    color: ${({ theme }) => theme.headers};
+    .skill__item {
+      background: ${({ theme }) => theme.skillItemBG};
+      box-shadow: ${({ theme }) => `2px 2px 2px 0px ${theme.boxShadow}`}; 
+    }
+  `;
+  const StyledProjects = styled(Projects)`
+    background: ${({ theme }) => theme.oddSectionBG};
+    color: ${({ theme }) => theme.headers};
+    .project__item {
+      box-shadow: ${({ theme }) => `4px 4px 2px 0px ${theme.boxShadow}`}; 
+    }
+  `;
+  const StyledContact = styled(Contact)`
+    background:  ${({ theme }) => theme.evenSectionBG};
+    color: ${({ theme }) => theme.headers};
+    margin-bottom: -50px;
+    padding-bottom: -10px;
+  `;
   const sectionRefs = [
     { section: "about", ref: aboutRef },
     { section: "project", ref: projectRef },
@@ -38,6 +76,15 @@ function App() {
     contact: {contactRef},
     skill: {skillRef}
   };
+  
+  const toggleTheme = () => {
+    let currTheme = theme === 'dark'? 'light': 'dark';
+    setTheme(currTheme);
+  }
+
+  const welcomeMessages = require('./data/welcome.json');
+  
+  
   useEffect(() => {
     document.title = "Sreejit De  💻";
   }, [])
@@ -87,28 +134,25 @@ function App() {
   //console.log(visibleSection);
 
   return (
+    <ThemeProvider theme = {theme === 'dark'? darkTheme: lightTheme}>
     <>
-    <div className={`app__body ${isToggled && "app-dark"}`}>
+    <Toggle theme={theme} toggleTheme={toggleTheme} />
+    <div className={`app__body`}>
     <motion.div className="app__header" ref = {headerRef}>
-      <Header 
-        toggle = {isToggled} 
-        onToggle = {() => setIsToggled(!isToggled)}
-        section = {visibleSection}
-        refs = {refs}
-      />
+      <Header section = {visibleSection}/>
     </motion.div>
     
-    <div className = {`app__intro ${!isToggled && "app__intro-light"}`}>
+    <div className = {`app__intro ${theme === 'light' && "light-bg"}`}>
         
       <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
         <div className="app__intro__body">
-          <motion.div className = {`intro__left ${!isToggled && "light"}`}
+          <motion.div className = {`intro__left`}
             
             initial = {{zoom: 0.25, opacity: 0, y: 0}}
             animate = {{zoom: 1, opacity: 1, y: 40}}
             transition = {{type: "tween", delay: 0.25, duration: 0.5}}
           > 
-            <div className="intro__details">
+            <StyledName className="intro__details">
               <div className="intro-line1">
               <motion.h1 
                 style = {{fontSize: 35, marginRight: 10}} 
@@ -126,7 +170,7 @@ function App() {
                 <b style = {{marginRight: '10px', fontSize: '35px'}}>Welcome to my space!</b>
                 <i class="em em-smile" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND SMILING EYES"></i>
               </motion.p>
-            </div>
+            </StyledName>
             {/*<div className="intro__icons">
               <IconButton>
               <ExternalLink href = 'https://github.com/Sreejit7'>
@@ -144,35 +188,35 @@ function App() {
 
           </motion.div>
         </div>
-        <HLink smooth to = "#about" className = {`bottom-icon ${downButton && "visible"}`}>
+        <HLink smooth to = "#about" className = {`bottom-icon ${downButton && "visible"} ${theme === 'light' && 'light'}`}>
           <ExpandMoreIcon fontSize = "large"/>
         </HLink>
       </div>
       <div className = 'about__section' ref = {aboutRef}>
-      <About />
+      <StyledAbout/>
       </div>
       <div className="skills__section" ref = {skillRef}>
-      <Skills/>
+      <StyledSkills/>
       </div>
       <div className = 'projects__section' ref = {projectRef}>
-      <Projects/>
+      <StyledProjects/>
       </div>
       <div className = 'contact__section' ref = {contactRef}>
-      <Contact/>
+      <StyledContact/>
       </div>
-      <div className = {`toTop ${topButton && "visible"}`} id = '#top'>
+      <TopButton className = {`toTop ${topButton && "visible"}`} id = '#top'>
         <HLink smooth to = '#top'>
         <IconButton>
           <ExpandLessIcon className = "toTopIcon"/>
         </IconButton>
         </HLink>
-      </div>
+      </TopButton>
       <div >
       <Footer/>
       </div>
     </div>
-    
     </>
+    </ThemeProvider>
   );
 }
 

@@ -15,7 +15,7 @@
   padding-bottom: 5vh;
 }
 .about__header h1{
-  color: rgb(250, 245, 235);
+  /* color: rgb(250, 245, 235); */
   margin-bottom: 30px;
   font-family: 'Cinzel Decorative', cursive;
   font-size: 35px;
@@ -53,6 +53,7 @@
   border-right: 0.25px solid black;
 }
 .about__item{
+  color: #000;
   margin-left: 40px;
   line-height: 1.4;
   margin-top: 10px;
@@ -97,6 +98,7 @@
   transform-origin:center right;
 }
 .about__item p{
+ 
   font-family: 'Amatic SC', cursive;
   font-family: 'Ranga', cursive;
   font-size: 1.5rem;

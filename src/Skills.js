@@ -3,7 +3,7 @@ import {SiCplusplus, SiJava, SiJavascript, SiC, SiCss3, SiReact, SiGit, SiMysql,
 import {IconContext} from 'react-icons';
 
 import './Skills.css';
-const Skills = () => {
+const Skills = ({className}) => {
   // const skills = require('./data/skills.json');
   const skills= [
     {
@@ -33,8 +33,8 @@ const Skills = () => {
     },
     {
       name: "JavaScript",
-      eff: "50%",
-      icon: <SiJavascript color = "#f0e124"/>
+      eff: "55%",
+      icon: <SiJavascript color = "#ffbd0a"/>
     },
     {
       name: "SQL",
@@ -50,7 +50,7 @@ const Skills = () => {
   return (
     <IconContext.Provider value = {{className: 'skill-icon'}}>
     <>
-    <div className = "skills" id = 'skill'>
+    <div className = {`${className} skills`} id = 'skill'>
       <div className="skill__title">
         <h1>SKILLS</h1>
       </div>

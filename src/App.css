@@ -1,14 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
-.app__body{
+.theme-button{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  z-index: 15;
+}
+/* .app__body{
   background: rgb(250,244,245);
   background: linear-gradient(180deg, rgba(250,244,245,1) 4%, rgba(153,187,187,1) 45%, rgba(103,179,214,1) 76%, rgba(43,143,201,1) 99%);
   
-}
-.app-dark{
+} */
+/* .app-body{
   background: rgb(1,13,32);
   background: linear-gradient(180deg, rgba(1,13,32,1) 9%, rgba(4,25,57,1) 38%, rgba(20,61,115,1) 83%, rgba(33,85,153,1) 99%);
-}
+} */
 .app__header{
   position: sticky;
   top: 0;
@@ -35,13 +42,18 @@
 .app__intro{
   display: flex;
   flex-direction: column;
-  background-image: url('https://media.giphy.com/media/l3nWay9wKNdq6WTxm/giphy.gif');
+  background-image: url('./backgrounds/portfolio-bg-dark.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   min-height: 100vh;
   margin-top: -80px;
   padding-bottom: 10vh;
+  color: #fff;
+}
+.light-bg{
+  background-image: url('./backgrounds/portfolio-bg-light.webp');
+  color: rgb(15, 6, 0);
 }
 .app__intro__body{
   display: flex;
@@ -54,7 +66,7 @@
 .intro__left{
   margin-top: 20vh;
   flex: 1;
-  color: rgb(255, 255, 255);
+  /* color: rgb(255, 255, 255); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,7 +113,7 @@
   margin: auto;
   margin-top: 20px;
 }
-
+/* 
 .about__section{
   background: #0a0a0a8c;
 }
@@ -114,12 +126,13 @@
 .contact__section{
   background: #250d3b77;
   bottom: 0;
-}
+} */
+
 .toTop{
   position: sticky;
   left: 10px;
   bottom: 5%;
-  background-color: rgb(197, 22, 22);
+  /* background: rgba(255, 255, 255, 0.11); */
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -133,6 +146,10 @@
   font-size: 25px;
   color: #fff;
   animation: jumping 0.5s ease infinite;
+}
+.toTop:hover{
+  opacity: 0.5;
+  transform: scale(0.9);
 }
 .bottom-icon{
   color: #fff;
@@ -177,7 +194,7 @@
   }
 }
 .light{
-  color: rgb(1, 11, 39);
+  color: rgb(18, 18, 19);
 }
 
 @media(max-width: 768px){

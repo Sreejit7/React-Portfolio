@@ -7,7 +7,29 @@ import {ExternalLink} from 'react-external-link';
 import {Link as LinkR} from 'react-router-dom';
 import ReorderIcon from '@material-ui/icons/Reorder';
 import Sidebar from './Sidebar';
-function Header({toggle, onToggle, section, refs}) {
+import styled from 'styled-components';
+
+const ThemedHeader = styled.div`
+  .header-scroll{
+    background-color: ${({ theme }) => theme.headerBG};
+  }
+  h2 {
+    color: ${({ theme }) => theme.textBG};
+  }
+  h2: hover{
+    color: ${({ theme }) => theme.hover};
+  }
+  .header-z{
+    z-index: 10;
+  }
+`;
+const ThemedItems = styled.div`
+  .link-selected{
+    border-bottom: ${({ theme }) => `5px solid ${theme.headerItem}`};
+    color: ${({ theme }) => theme.headerTextBG};
+  } 
+`
+function Header({ section}) {
   const [sidebar, setSidebar] = useState(false);
   const [scrollNav, setScrollNav] = useState(false);
   useEffect(() => {
@@ -27,14 +49,14 @@ function Header({toggle, onToggle, section, refs}) {
   }, []);  
 
   return (
-    <>
+    <ThemedHeader>
     <motion.div 
-      className = {`header ${toggle && "header-dark"} ${scrollNav && "header-scroll"}`}
+      className = {`header ${scrollNav && "header-scroll"}`}
       initial = {{y: '-10vh'}}
       animate = {{y: 0}}
       transition = {{type: 'spring', stiffness: 100, delay: 0.45, duration: 0.5}}
     >
-      <div className="header__items">
+      <ThemedItems className="header__items">
         <Link 
           smooth to = '#about' 
           className = {`header__link ${section === "about" && "link-selected"}`}
@@ -65,18 +87,15 @@ function Header({toggle, onToggle, section, refs}) {
         >
           <h2>Contact Me</h2>
         </Link>
-      </div>
-      <motion.div className = "app__switch">
-        <Switch isToggled = {toggle} onToggle = {onToggle}/>
-      </motion.div>
+      </ThemedItems>
       <LinkR to = "#" onClick = {() => setSidebar(!sidebar)}>
-      <ReorderIcon fontSize = "large" className = {`sidebar__icon ${!toggle && "light"}`}/>
+      <ReorderIcon fontSize = "large" className = {`sidebar__icon`}/>
       </LinkR>
     </motion.div>
     
     
     <Sidebar sidebar = {sidebar} showSidebar = {() => setSidebar(!sidebar)}/>
-  </>
+  </ThemedHeader>
   )
 }
 export default Header

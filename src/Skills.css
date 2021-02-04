@@ -8,7 +8,7 @@
   min-height: 80vh;
 }
 .skill__title{
-  color: #fff;
+  /* color: #fff; */
   font-family: 'Cinzel Decorative', cursive;
   margin-bottom: 40px;
 }
@@ -39,17 +39,19 @@
   width: 180px;
   padding: 20px;
   margin: 10px;
-  background-color: rgba(240, 248, 255, 0.062);
+  /* background-color: rgba(240, 248, 255, 0.062); */
+  /* background-color: rgba(5, 62, 116, 0.158); */
   position: relative;
   border-radius: 10px;
   padding-bottom: 2px;
-  box-shadow: 2px 2px 2px 0px #ffffff6e;
+  /* box-shadow: 2px 2px 2px 0px #ffffff6e; */
+  /* box-shadow: 2px 2px 2px 0px #1414146e; */
 }
 .skill__item:hover{
   transform: scale(1.1);
 }
 .skill__item h2{
-  color: #fff;
+  /* color: #fff; */
 }
 .skill-icon{
   font-size: 5rem;

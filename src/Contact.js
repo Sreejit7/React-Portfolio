@@ -7,8 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import {GitHub, LinkedIn} from '@material-ui/icons';
 import {ExternalLink} from 'react-external-link';
 import './Contact.css'; 
-function Contact() {
-
+function Contact({className}) {
   const sendMail = (e) => {
     e.preventDefault();
 
@@ -22,7 +21,7 @@ function Contact() {
     alert('Hi! Thanks for reaching out! I will get back to you ASAP!');
   }  
   return (
-    <div className = 'contact' id = 'contact'>
+    <div className = {`${className} contact`} id = 'contact'>
       <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
       <div className="contact__header">
         <h1>CONTACT ME</h1>

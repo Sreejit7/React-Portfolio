@@ -4,30 +4,30 @@ import {Mail, Phone, Home, GetApp} from '@material-ui/icons';
 import IconButton from '@material-ui/core/IconButton';
 import FileSaver, {saveAs} from 'file-saver';
 import './About.css';
-function About() {
-  const institues = [
-    { 
-      name: "St. Thomas' College of Engineering & Technology",
-      place: " - Kolkata, India",
-      course: "Bachelor of Technology, Computer Science & Engineering",
-      timeline: " - 2017 - 2021 (Expected)",
-      grades: "CGPA: 8.93 / 10 (Upto 6th)"
-    },
-    {
-      name: "Tamluk Hamilton High School",
-      place: " - Tamluk, India",
-      course: "Class XII Board Exam",
-      timeline: " - 2015 - 2017",
-      grades: "90%"
-    },
-    {
-      name: "Tamluk Hamilton High School",
-      place: " - Tamluk, India",
-      course: "Class X Board Exam",
-      timeline: " - 2009 - 2015",
-      grades: "93%"
-    }
-  ];
+function About({className}) {
+  // const institues = [
+  //   { 
+  //     name: "St. Thomas' College of Engineering & Technology",
+  //     place: " - Kolkata, India",
+  //     course: "Bachelor of Technology, Computer Science & Engineering",
+  //     timeline: " - 2017 - 2021 (Expected)",
+  //     grades: "CGPA: 8.93 / 10 (Upto 6th)"
+  //   },
+  //   {
+  //     name: "Tamluk Hamilton High School",
+  //     place: " - Tamluk, India",
+  //     course: "Class XII Board Exam",
+  //     timeline: " - 2015 - 2017",
+  //     grades: "90%"
+  //   },
+  //   {
+  //     name: "Tamluk Hamilton High School",
+  //     place: " - Tamluk, India",
+  //     course: "Class X Board Exam",
+  //     timeline: " - 2009 - 2015",
+  //     grades: "93%"
+  //   }
+  // ];
   
   const about = [
     {
@@ -35,7 +35,7 @@ function About() {
       a: `I'm a Final Year B.Tech Student in Computer Science from Tamluk, India. 
           I love problem solving and web development. 
           I'm always looking forward to learn new technologies and evolving my skills constantly.
-          Currently learning JavaScript & Mongo DB! I'm about to graduate in 2021, so I'm looking for my first SDE Internship and/or Full-time role, please drop a message if you have an open position or know someone who might. Thanks!`
+          Currently learning JavaScript & Mongo DB! I'm about to graduate in 2021, so I'm looking for my first Full-time role as a Software / Web / Frontend devloper, please drop a message if you have an open position or know someone who might. Thanks!`
     },
     {
       q: "My Coding Journey",
@@ -55,7 +55,7 @@ function About() {
     FileSaver.saveAs("https://drive.google.com/file/d/1nln2EHepkQEKQfRpl0nOWjyI2TH_foD7/view?usp=sharing", "Sreejit De Resume.pdf");
   }
   return (
-    <motion.div className = "about" id = "about">
+    <motion.div className = {`${className} about`} id = "about">
       <div className="about__header">
           <h1>ABOUT ME</h1>
           <div className="about__area">
