@@ -21,10 +21,11 @@
   margin-bottom: 20px;
 }
 .contact__title h1{
-  color: rgb(25, 25, 26);
+  color: rgb(243, 243, 247);
   text-align: center;
   margin-right: 10px;
   font-size: 1.5rem;
+  margin-left: 30px;
 }
 .contact__container{
   display: flex;
@@ -32,9 +33,11 @@
   max-width: 70vw;
   align-items: center;
   justify-content: center;
-  background: url('contact-bg.png');
+  /* background: url('contact-bg.png');
   background-size: cover;
-  background-position: center;
+  background-position: center; */
+  background: rgb(123,246,245);
+  background: linear-gradient(90deg, rgba(123,246,245,1) 16%, rgba(84,171,230,1) 50%, rgba(4,13,48,1) 50%, rgba(25,2,41,1) 92%);
   padding: 10px;
   border-radius: 10px;
   border: 0.15px solid black;
@@ -59,7 +62,9 @@
   font-size: 16px;
   margin-bottom: 20px;
   border-radius: 10px;
-  box-shadow: 1px 1px 2px 0px rgb(15, 15, 15);
+  box-shadow: 2px 2px 2px 0px rgba(233, 232, 232, 0.507);
+  border: none;
+  background-color: rgb(238, 237, 237);
 }
 .form__input:first-child{
   margin-top: 20px;
@@ -69,13 +74,15 @@
 }
 .contact__form textarea{
   outline-width: 0;
+  border: none;
+  background-color: rgb(238, 237, 237);
   padding: 10px;
   width: 70%;
   font-size: 16px;
   margin-top: 20px;
   margin-bottom: 30px;
   border-radius: 10px;
-  box-shadow: 2px 2px 2px 0px rgb(15, 15, 15);
+  box-shadow: 2px 2px 2px 0px rgba(233, 232, 232, 0.507);
 }
 .form__submit{
   background-color: rgb(0, 119, 255);
@@ -115,7 +122,7 @@
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  color: rgb(10, 10, 10);
+  color: rgb(29, 29, 29);
   padding: 15px;
   line-height: 2;
   /*border: 0.25px solid #fff;*/
@@ -192,5 +199,8 @@
   }
   .contact__infoLine p{
     font-size: 1.1rem;
+  }
+  .contact__container{
+    background: linear-gradient(180deg, rgba(123,246,245,1) 16%, rgba(84,171,230,1) 50%, rgba(4,13,48,1) 50%, rgba(25,2,41,1) 92%);
   }
 }

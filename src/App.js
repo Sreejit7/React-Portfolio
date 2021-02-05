@@ -135,7 +135,7 @@ function App() {
 
   return (
     <ThemeProvider theme = {theme === 'dark'? darkTheme: lightTheme}>
-    <>
+    <div className = {`app ${theme === 'light' && "light-theme"}`}>
     <Toggle theme={theme} toggleTheme={toggleTheme} />
     <div className={`app__body`}>
     <motion.div className="app__header" ref = {headerRef}>
@@ -215,7 +215,7 @@ function App() {
       <Footer/>
       </div>
     </div>
-    </>
+    </div>
     </ThemeProvider>
   );
 }
