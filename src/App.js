@@ -82,7 +82,6 @@ function App() {
     setTheme(currTheme);
   }
 
-  const welcomeMessages = require('./data/welcome.json');
   
   
   useEffect(() => {
@@ -171,21 +170,6 @@ function App() {
                   <i class="em em-smile" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND SMILING EYES"></i>
                 </motion.p>
               </StyledName>
-              {/*<div className="intro__icons">
-                <IconButton>
-                <ExternalLink href = 'https://github.com/Sreejit7'>
-                  <GitHub fontSize = "large" className = {`gh-icon ${!isToggled && "light"}`}/>
-                  </ExternalLink>
-                </IconButton>
-                <IconButton>
-                  <ExternalLink href = 'https://www.linkedin.com/in/sreejit-de-64a84b190/'>
-                    <LinkedIn fontSize = "large" className = {`li-icon ${!isToggled && "light"}`}/>
-                  </ExternalLink>
-                </IconButton>
-                
-              </div>*/}
-              
-
             </motion.div>
           </div>
           <HLink smooth to = "#about" className = {`bottom-icon ${downButton && "visible"} ${theme === 'light' && 'light'}`}>

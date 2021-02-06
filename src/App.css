@@ -14,10 +14,6 @@
   background: rgb(216, 217, 218);
   
 }
-/* .app-body{
-  background: rgb(1,13,32);
-  background: linear-gradient(180deg, rgba(1,13,32,1) 9%, rgba(4,25,57,1) 38%, rgba(20,61,115,1) 83%, rgba(33,85,153,1) 99%);
-} */
 .app__header{
   position: sticky;
   top: 0;
@@ -110,21 +106,6 @@
   margin: auto;
   margin-top: 20px;
 }
-/* 
-.about__section{
-  background: #0a0a0a8c;
-}
-.skills__section{
-  background: #250d3b77;
-}
-.projects__section{
-  background: #0a0a0a8c;
-}
-.contact__section{
-  background: #250d3b77;
-  bottom: 0;
-} */
-
 .toTop{
   position: sticky;
   left: 10px;
