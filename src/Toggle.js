@@ -16,7 +16,17 @@ const ToggleContainer = styled.div`
   background: ${({ theme }) => theme.gradient}; 
   padding: 5px;
   transition: 0.4s;
-
+  animation: 2.5s lazy-load ease-in;
+  @keyframes lazy-load{
+    from{
+      opacity: 0;
+      
+    }
+    to{
+      opacity: 1;
+      
+    }
+  }
   .tooltip-text {
     visibility: hidden;
     width: 120px;

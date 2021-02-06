@@ -136,85 +136,85 @@ function App() {
   return (
     <ThemeProvider theme = {theme === 'dark'? darkTheme: lightTheme}>
     <div className = {`app ${theme === 'light' && "light-theme"}`}>
-    <Toggle theme={theme} toggleTheme={toggleTheme} />
-    <div className={`app__body`}>
-    <motion.div className="app__header" ref = {headerRef}>
-      <Header section = {visibleSection}/>
-    </motion.div>
-    
-    <div className = {`app__intro ${theme === 'light' && "light-bg"}`}>
-        
-      <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
-        <div className="app__intro__body">
-          <motion.div className = {`intro__left`}
-            
-            initial = {{zoom: 0.25, opacity: 0, y: 0}}
-            animate = {{zoom: 1, opacity: 1, y: 40}}
-            transition = {{type: "tween", delay: 0.25, duration: 0.5}}
-          > 
-            <StyledName className="intro__details">
-              <div className="intro-line1">
-              <motion.h1 
-                style = {{fontSize: 35, marginRight: 10}} 
-              >Hey there!</motion.h1> <i class="em-svg em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
-              <h1 style = {{marginLeft: '10px'}}>I'm</h1>
-              </div>
-              <div className="intro-line2">
-                <motion.h1>Sreejit De<span className = "dot">.</span></motion.h1>
-              </div>
+      <Toggle theme={theme} toggleTheme={toggleTheme} />
+      <div className={`app__body`}>
+      <motion.div className="app__header" ref = {headerRef}>
+        <Header section = {visibleSection}/>
+      </motion.div>
+      
+      <div className = {`app__intro ${theme === 'light' && "light-bg"}`}>
+          
+        <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
+          <div className="app__intro__body">
+            <motion.div className = {`intro__left`}
               
-              <motion.p 
-                className = "intro__desc"
-                animate = {{y: 0}}
-              >
-                <b style = {{marginRight: '10px', fontSize: '35px'}}>Welcome to my space!</b>
-                <i class="em em-smile" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND SMILING EYES"></i>
-              </motion.p>
-            </StyledName>
-            {/*<div className="intro__icons">
-              <IconButton>
-              <ExternalLink href = 'https://github.com/Sreejit7'>
-                <GitHub fontSize = "large" className = {`gh-icon ${!isToggled && "light"}`}/>
-                </ExternalLink>
-              </IconButton>
-              <IconButton>
-                <ExternalLink href = 'https://www.linkedin.com/in/sreejit-de-64a84b190/'>
-                  <LinkedIn fontSize = "large" className = {`li-icon ${!isToggled && "light"}`}/>
-                </ExternalLink>
-              </IconButton>
+              initial = {{zoom: 0.25, opacity: 0, y: 0}}
+              animate = {{zoom: 1, opacity: 1, y: 40}}
+              transition = {{type: "tween", delay: 0.25, duration: 0.5}}
+            > 
+              <StyledName className="intro__details">
+                <div className="intro-line1">
+                <motion.h1 
+                  style = {{fontSize: 35, marginRight: 10}} 
+                >Hey there!</motion.h1> <i class="em-svg em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
+                <h1 style = {{marginLeft: '10px'}}>I'm</h1>
+                </div>
+                <div className="intro-line2">
+                  <motion.h1>Sreejit De<span className = "dot">.</span></motion.h1>
+                </div>
+                
+                <motion.p 
+                  className = "intro__desc"
+                  animate = {{y: 0}}
+                >
+                  <b style = {{marginRight: '10px', fontSize: '35px'}}>Welcome to my space!</b>
+                  <i class="em em-smile" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND SMILING EYES"></i>
+                </motion.p>
+              </StyledName>
+              {/*<div className="intro__icons">
+                <IconButton>
+                <ExternalLink href = 'https://github.com/Sreejit7'>
+                  <GitHub fontSize = "large" className = {`gh-icon ${!isToggled && "light"}`}/>
+                  </ExternalLink>
+                </IconButton>
+                <IconButton>
+                  <ExternalLink href = 'https://www.linkedin.com/in/sreejit-de-64a84b190/'>
+                    <LinkedIn fontSize = "large" className = {`li-icon ${!isToggled && "light"}`}/>
+                  </ExternalLink>
+                </IconButton>
+                
+              </div>*/}
               
-            </div>*/}
-            
 
-          </motion.div>
+            </motion.div>
+          </div>
+          <HLink smooth to = "#about" className = {`bottom-icon ${downButton && "visible"} ${theme === 'light' && 'light'}`}>
+            <ExpandMoreIcon fontSize = "large"/>
+          </HLink>
         </div>
-        <HLink smooth to = "#about" className = {`bottom-icon ${downButton && "visible"} ${theme === 'light' && 'light'}`}>
-          <ExpandMoreIcon fontSize = "large"/>
-        </HLink>
+        <div className = 'about__section' ref = {aboutRef}>
+        <StyledAbout/>
+        </div>
+        <div className="skills__section" ref = {skillRef}>
+        <StyledSkills/>
+        </div>
+        <div className = 'projects__section' ref = {projectRef}>
+        <StyledProjects/>
+        </div>
+        <div className = 'contact__section' ref = {contactRef}>
+        <StyledContact/>
+        </div>
+        <TopButton className = {`toTop ${topButton && "visible"}`} id = '#top'>
+          <HLink smooth to = '#top'>
+          <IconButton>
+            <ExpandLessIcon className = "toTopIcon"/>
+          </IconButton>
+          </HLink>
+        </TopButton>
+        <div >
+        <Footer/>
+        </div>
       </div>
-      <div className = 'about__section' ref = {aboutRef}>
-      <StyledAbout/>
-      </div>
-      <div className="skills__section" ref = {skillRef}>
-      <StyledSkills/>
-      </div>
-      <div className = 'projects__section' ref = {projectRef}>
-      <StyledProjects/>
-      </div>
-      <div className = 'contact__section' ref = {contactRef}>
-      <StyledContact/>
-      </div>
-      <TopButton className = {`toTop ${topButton && "visible"}`} id = '#top'>
-        <HLink smooth to = '#top'>
-        <IconButton>
-          <ExpandLessIcon className = "toTopIcon"/>
-        </IconButton>
-        </HLink>
-      </TopButton>
-      <div >
-      <Footer/>
-      </div>
-    </div>
     </div>
     </ThemeProvider>
   );

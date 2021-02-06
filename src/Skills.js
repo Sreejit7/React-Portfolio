@@ -22,9 +22,14 @@ const Skills = ({className}) => {
       icon: <SiC color = "#6ab8c1"/>
     },
     {
-      name: "React JS",
+      name: "React",
       eff: "75%",
       icon:<SiReact color = "#10e7e3" className = "react-icon"/>,
+    },
+    {
+      name: "HTML",
+      eff: "60%",
+      icon:<SiHtml5 color = "#ff8921"/>
     },
     {
       name: "CSS",

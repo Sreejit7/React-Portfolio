@@ -3,6 +3,7 @@ import {motion} from 'framer-motion';
 import {Mail, Phone, Home, GetApp} from '@material-ui/icons';
 import IconButton from '@material-ui/core/IconButton';
 import FileSaver, {saveAs} from 'file-saver';
+import LazyLoad from 'react-lazy-load';
 import './About.css';
 function About({className}) {
   // const institues = [
@@ -59,12 +60,13 @@ function About({className}) {
       <div className="about__header">
           <h1>ABOUT ME</h1>
           <div className="about__area">
+            {/* <LazyLoad offsetTop = {250} debounce = {false}> */}
               <img
                 alt = ""
                 src = "/images/coding.gif"
                 className = "about__img"
               />
-            
+            {/* </LazyLoad> */}
             <div className="about__desc">           
               {about.map((item) => (
                 <div className="about__item">
@@ -73,11 +75,13 @@ function About({className}) {
                 </div>
               ))}
             </div>
+            {/* <LazyLoad offsetTop = {250}> */}
             <img
                 alt = ""
                 src = "/images/coffee.png"
                 className = "about__img2"
               />
+            {/* </LazyLoad> */}
           </div>
           
           
