@@ -7,8 +7,11 @@
   padding: 5px;
   z-index: 15;
 }
-.app__body{
-  background: rgb(181, 195, 218);
+.app{
+  background: rgb(23, 8, 77);
+}
+.light-theme{
+  background: rgb(216, 217, 218);
   
 }
 /* .app-body{
