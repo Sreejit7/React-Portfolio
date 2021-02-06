@@ -1,6 +1,5 @@
 import React,{useState, useEffect} from 'react'
 import {motion} from 'framer-motion';
-import Switch from './Switch';
 import './Header.css';
 import {NavHashLink as Link } from 'react-router-hash-link';
 import {ExternalLink} from 'react-external-link';
