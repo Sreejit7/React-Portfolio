@@ -53,7 +53,7 @@ function Contact({className}) {
                   </ExternalLink>
                 </IconButton>
                 <IconButton>
-                  <ExternalLink href = 'https://www.linkedin.com/in/sreejit-de-64a84b190/'>
+                  <ExternalLink href = 'https://www.linkedin.com/in/sreejit-de/'>
                     <LinkedIn fontSize = "large" className = {`li-icon ${ "light"}`}/>
                   </ExternalLink>
                 </IconButton>
