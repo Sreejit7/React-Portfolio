@@ -77,7 +77,7 @@ function Header({ section}) {
         >
           <h2>Projects</h2>
         </Link>
-        <ExternalLink href = 'https://drive.google.com/file/d/1p26EmWmBBQtpcebwoGSkh2cUO_KnnAu-/view?usp=sharing' className = "header__link">
+        <ExternalLink href = 'https://drive.google.com/file/d/15ERaqbiLN1lkKJALKPJOyynn1uD4BeMG/view?usp=sharing' className = "header__link">
           <h2>Resume</h2>
         </ExternalLink>
         <Link 
