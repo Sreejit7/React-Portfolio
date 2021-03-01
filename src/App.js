@@ -15,7 +15,6 @@ import Skills from './Skills';
 import {lightTheme, darkTheme} from './theme';
 import styled, { ThemeProvider } from 'styled-components'
 import Toggle from './Toggle';
-
 function App() {
   const [visibleSection, setVisibleSection] = useState();
   const [topButton, setTopButton] = useState(false);

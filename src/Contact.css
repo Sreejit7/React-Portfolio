@@ -33,9 +33,6 @@
   max-width: 70vw;
   align-items: center;
   justify-content: center;
-  /* background: url('contact-bg.png');
-  background-size: cover;
-  background-position: center; */
   background: rgb(123,246,245);
   background: linear-gradient(90deg, rgba(123,246,245,1) 16%, rgba(84,171,230,1) 50%, rgba(4,13,48,1) 50%, rgba(25,2,41,1) 92%);
   padding: 10px;

@@ -13,7 +13,7 @@ export const sidebarItems = [
   },
   {
     name: 'RESUME',
-    link: 'https://drive.google.com/file/d/1nln2EHepkQEKQfRpl0nOWjyI2TH_foD7/view?usp=sharing',
+    link: 'https://drive.google.com/file/d/1S6gFtxDJhafDHRNgEi4VKUPW878yOJh8/view?usp=sharing',
   },
   {
     name: 'CONTACT ME',
