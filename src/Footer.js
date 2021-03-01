@@ -7,10 +7,9 @@ import {ExternalLink} from 'react-external-link';
 function Footer() {
   return (
     <div className = "footer" id = "footer">
-      <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
       
       <div className="footer__desc">
-        <span>Made with <i class="em em-heart" aria-role="presentation" aria-label="HEAVY BLACK HEART"></i> by Sreejit De.</span>
+        <span>Made with ❤️ by Sreejit De.</span>
         <span><h3>Let's connect!</h3></span>
       </div>
       <div className="footer__icons">

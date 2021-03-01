@@ -1,8 +1,7 @@
 import React from 'react';
 import {motion} from 'framer-motion';
 import emailjs from 'emailjs-com';
-import SendIcon from '@material-ui/icons/Send';
-import {Mail, Phone, Home, GetApp} from '@material-ui/icons';
+import {Mail, Home, } from '@material-ui/icons';
 import IconButton from '@material-ui/core/IconButton';
 import {GitHub, LinkedIn} from '@material-ui/icons';
 import {ExternalLink} from 'react-external-link';
@@ -22,7 +21,6 @@ function Contact({className}) {
   }  
   return (
     <div className = {`${className} contact`} id = 'contact'>
-      <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
       <div className="contact__header">
         <h1>CONTACT ME</h1>
       </div>

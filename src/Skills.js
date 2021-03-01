@@ -4,7 +4,6 @@ import {IconContext} from 'react-icons';
 
 import './Skills.css';
 const Skills = ({className}) => {
-  // const skills = require('./data/skills.json');
   const skills= [
     {
       name: "C++",

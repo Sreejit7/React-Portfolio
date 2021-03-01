@@ -5,7 +5,6 @@ import {getDimensions} from './util';
 import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
-import {ExternalLink} from 'react-external-link';
 import {HashLink as HLink} from 'react-router-hash-link';
 import Header from './Header';
 import About from './About';
@@ -143,7 +142,6 @@ function App() {
       
       <div className = {`app__intro ${theme === 'light' && "light-bg"}`}>
           
-        <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
           <div className="app__intro__body">
             <motion.div className = {`intro__left`}
               
@@ -155,7 +153,7 @@ function App() {
                 <div className="intro-line1">
                 <motion.h1 
                   style = {{fontSize: 35, marginRight: 10}} 
-                >Hey there!</motion.h1> <i class="em-svg em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
+                >Hey there!</motion.h1>
                 <h1 style = {{marginLeft: '10px'}}>I'm</h1>
                 </div>
                 <div className="intro-line2">
@@ -167,7 +165,7 @@ function App() {
                   animate = {{y: 0}}
                 >
                   <b style = {{marginRight: '10px', fontSize: '35px'}}>Welcome to my space!</b>
-                  <i class="em em-smile" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND SMILING EYES"></i>
+                  
                 </motion.p>
               </StyledName>
             </motion.div>

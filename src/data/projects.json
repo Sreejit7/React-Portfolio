@@ -7,7 +7,7 @@
       "tech": ["React JS", "disease.sh API", "GNews API"],
       "url": "https://covid-19care.web.app/",
       "gh": "https://github.com/Sreejit7/COVID-care",
-      "img": "/images/covid-care.png"
+      "img": "/images/covid-care.webp"
     },
     {
       "name": "HomeMade",
@@ -15,7 +15,7 @@
       "tech": ["React JS", "Firebase", "Stripe Payments API"],
       "url": "https://github.com/Sreejit7/Ecommerce-website",
       "gh": "https://github.com/Sreejit7/Ecommerce-website",
-      "img": "/images/homemade.png"
+      "img": "/images/homemade.webp"
     },
     {
       "name": "HEADLINER",
@@ -23,7 +23,7 @@
       "tech": ["React JS", "GNews API"],
       "url": "https://headliner.netlify.app/",
       "gh": "https://github.com/Sreejit7/React-Newsapp",
-      "img": "/images/headliner-ss.png"
+      "img": "/images/headliner.webp"
     }
   ]
 }

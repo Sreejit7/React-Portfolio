@@ -1,9 +1,5 @@
 import React from 'react'
 import {motion} from 'framer-motion';
-import {Mail, Phone, Home, GetApp} from '@material-ui/icons';
-import IconButton from '@material-ui/core/IconButton';
-import FileSaver, {saveAs} from 'file-saver';
-import LazyLoad from 'react-lazy-load';
 import './About.css';
 function About({className}) {
   const about = [
@@ -28,21 +24,11 @@ function About({className}) {
           Other than that, I like putting colours on things which otherwise seem dull i.e. painting!`
     }
   ]
-  const resumeDownload = () => {
-    FileSaver.saveAs("https://drive.google.com/file/d/1nln2EHepkQEKQfRpl0nOWjyI2TH_foD7/view?usp=sharing", "Sreejit De Resume.pdf");
-  }
   return (
     <motion.div className = {`${className} about`} id = "about">
       <div className="about__header">
           <h1>ABOUT ME</h1>
-          <div className="about__area">
-            {/* <LazyLoad offsetTop = {250} debounce = {false}> */}
-              <img
-                alt = ""
-                src = "/images/coding.gif"
-                className = "about__img"
-              />
-            {/* </LazyLoad> */}
+          <div className="about__area">            
             <div className="about__desc">           
               {about.map((item) => (
                 <div className="about__item">
@@ -50,17 +36,8 @@ function About({className}) {
                   <p>{item.a}</p>
                 </div>
               ))}
-            </div>
-            {/* <LazyLoad offsetTop = {250}> */}
-            <img
-                alt = ""
-                src = "/images/coffee.png"
-                className = "about__img2"
-              />
-            {/* </LazyLoad> */}
+            </div>            
           </div>
-          
-          
       </div>
     </motion.div>
   )
