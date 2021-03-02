@@ -83,7 +83,7 @@ function App() {
   
   
   useEffect(() => {
-    document.title = "Sreejit De  💻";
+    document.title = "Sreejit De  💻 | Web Developer, Software Engineering Aspirant";
   }, [])
   useEffect(() => {
     const { height: headerHeight } = getDimensions(headerRef.current);
