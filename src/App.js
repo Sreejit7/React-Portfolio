@@ -68,12 +68,6 @@ function App() {
     { section: "contact", ref: contactRef },
     {section: "skill", ref: skillRef}
   ];
-  const refs = {
-    about: {aboutRef},
-    project: {projectRef},
-    contact: {contactRef},
-    skill: {skillRef}
-  };
   
   const toggleTheme = () => {
     let currTheme = theme === 'dark'? 'light': 'dark';

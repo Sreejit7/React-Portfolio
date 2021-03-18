@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Ranga&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap');
+
 .about{
   display: flex;
   flex-direction: column;
@@ -16,7 +16,6 @@
 }
 .about__header h1{
   margin-bottom: 30px;
-  font-family: 'Cinzel Decorative', cursive;
   font-size: 35px;
 }
 .about__area{
