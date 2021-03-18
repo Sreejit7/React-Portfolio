@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Ranga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap');
 
 .about{
   display: flex;
@@ -22,32 +21,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 
-}
-.about__img{
-  width: 25vw;
-  object-fit: contain;
-  left: -10px;
-  margin: auto;
-}
-.about__img2{
-  width: 18vw;
-  object-fit: contain;
-  margin: auto;
 }
 .about__desc{
   margin-top: 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgb(255,244,99);
-  background: linear-gradient(180deg, rgba(255,244,99,1) 0%, rgba(252,235,82,1) 20%, rgba(244,181,27,1) 100%);
-  background-position: center;
-  background-size: cover;
-  padding: 20px;
+  background: linear-gradient(101.58deg, #F3F5FB 2.73%, #B6B9CB 53.15%, #261D42 117.24%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  box-shadow: 4px 4px 2px 0px rgb(241, 241, 241);
+  padding: 20px;
   max-width: 50vw;
   margin-right: 30px;
   border-bottom: 0.25px solid black;
@@ -57,21 +42,21 @@
   color: #000;
   margin-left: 40px;
   line-height: 1.4;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0px;
 }
 .about__item h2{
   position:relative;
   z-index: 2;
   margin-bottom: 5px;
-  font-family: 'Amatic SC', cursive;
   font-size: 2rem;
   font-weight: 800;
   width: fit-content;
-  margin:0 0.5em;
-  padding:0 0.2em;
+  font-family: 'Ribeye Marrow', cursive;
+  mix-blend-mode: normal;
+  box-sizing: border-box;
+  transform: rotate(-3.04deg);
 }
-.about__item h2:before{
+/* .about__item h2:before{
   content:"";
   z-index:-1;
   left:-0.5em;
@@ -97,12 +82,11 @@
   border-left-color:transparent;
   transform:rotate(180deg);
   transform-origin:center right;
-}
+} */
 .about__item p{
- 
-  font-family: 'Amatic SC', cursive;
-  font-family: 'Ranga', cursive;
   font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 10px;
 }
 
 .about__body{
@@ -115,170 +99,7 @@
   align-items: center;
   justify-content: center;
 }
-.education{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  width: 100%;
-}
-.about__title{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 15px;
-}
-.about__title h1{
-  color: rgb(1, 3, 29);
-  font-family:'Segoe UI', sans-serif;
-  margin-right: 5px;
-  text-align: center;
-}
-.institutes{
-  cursor: pointer;
-  background: transparent;
-  padding: 15px;
-  /*border: 0.25px solid white;*/
-  background-color: rgba(235, 238, 240, 0.918);
-  border-radius: 20px;
-  color: rgb(5, 5, 5);
-  box-shadow: 2px 5px 5px 0px rgb(7, 1, 41);
-  margin-bottom: 15px;
-  width: 90%;
-}
 
-.institutes h2, h3, h4, em{
-  margin-bottom: 5px;
-  margin-top: 5px;
-  margin-left: 15px;
-}
-.about__right{
-  flex: 0.5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-/*.skills{
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-}*/
-
-.skill__bars{
-  padding: 30px;
-  /*border: 0.25px solid #fff;*/
-  border-radius: 20px;
-  /*box-shadow: 0px 0px 8px 0px #fff;*/
-  /*background-color: rgba(236, 239, 240, 0.144);*/
-}
-.skill__bars h3{
-  color: rgb(14, 14, 14);
-  
-}
-.skillbar{
-  width: 100%;
-  background: #051129;
-  border: 1px solid rgba(1, 44, 10, 0.959);
-  height: 20px;
-  display: block;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0px 0px 10px #04684fee;
-}
-.skillbar span{
-  background: rgb(247,202,3);
-  background: linear-gradient(90deg, rgba(247,202,3,1) 35%, rgba(247,70,3,1) 92%);
-  height: 20px;
-  border-radius: 20px;
-  float: left;
-}
-.hobbies{
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin-top: 30px;
-  border-radius: 20px;
-  align-items: center;
-  justify-content: center;
-  /*background-color: rgba(236, 239, 240, 0.253);*/
-}
-.hobbies h1{
-  color: black;
-}
-.hobbies h4{
-  color: rgb(7, 7, 7);
-}
-.hobbies__list{
-  margin: auto;
-  display: flex;
-  height: 100%;
-  padding: 20px;
-  justify-content: space-evenly;
-  
-  border-radius: 20px;
-}
-.hobby__item{
-  background-color: rgba(247, 247, 247, 0.945);
-  box-shadow: 2px 3px 5px 0px rgb(7, 1, 41);
-  padding: 15px;
-  line-height: 1.5;
-  margin-right: 5px;
-  max-width: 250px;
-  border-radius: 15px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-.hobby__name{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.football{
-  animation: jumping 0.2s alternate ease infinite;
-}
-.resume{
-  margin-top: 10px;
-  width: 90%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.resume__download{
-  margin-right: 30px;
-  padding: 10px;
-  width: 40%;
-  background-color: rgb(250, 178, 44);
-  color: rgb(27, 26, 26);
-  font-size: larger;
-  font-weight: 700;
-  box-shadow: 2px 3px 5px 0px rgb(7, 1, 41);
-  cursor: pointer;
-  outline-width: 0;
-  border-radius: 10px;
-}
-.resume__download:hover{
-  transform: scale(1.1);
-  opacity: 0.75;
-}
-.resume-icon{
-  color: rgb(255, 255, 255);
-  border-radius: 50%;
-  padding: 5px;
-  box-shadow: 0px 0px 10px 0px #003d1c;
-}
-@keyframes jumping{
-  from{
-    transform: translateY(-5px);
-  }
-  to{
-    transform: translateY(5px);
-  }
-}
 @media(max-width: 1160px){
   .contact__info{
     font-size: 1rem;
