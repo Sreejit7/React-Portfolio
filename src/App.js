@@ -1,4 +1,5 @@
 import React,{useState, useRef, useEffect} from 'react';
+import { SunspotLoader } from 'react-awesome-loaders';
 import './App.css';
 import {motion} from 'framer-motion';
 import {getDimensions} from './util';
@@ -20,6 +21,7 @@ function App() {
   const [topButton, setTopButton] = useState(false);
   const [downButton, setDownButton] = useState(true);
   const [theme, setTheme] = useState('dark');
+  const [loading, setLoading] = useState(false);
   const headerRef = useRef(null);
   const aboutRef = useRef(null);
   const projectRef = useRef(null);
@@ -73,12 +75,18 @@ function App() {
     let currTheme = theme === 'dark'? 'light': 'dark';
     setTheme(currTheme);
   }
-
-  
   
   useEffect(() => {
     document.title = "Sreejit De  💻 | Web Developer, Software Engineering Aspirant";
   }, [])
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  },[]);
+
   useEffect(() => {
     const { height: headerHeight } = getDimensions(headerRef.current);
     const handleToTop = () => {
@@ -126,6 +134,14 @@ function App() {
 
   return (
     <ThemeProvider theme = {theme === 'dark'? darkTheme: lightTheme}>
+    <>
+    { loading?
+      <SunspotLoader
+      gradientColors={["#6366F1", "#E0E7FF"]}
+      shadowColor={"#f7f7f7"}
+      desktopSize={"128px"}
+      mobileSize={"100px"}
+    /> :
     <div className = {`app ${theme === 'light' && "light-theme"}`}>
       <Toggle theme={theme} toggleTheme={toggleTheme} />
       <div className={`app__body`}>
@@ -190,7 +206,8 @@ function App() {
         <Footer/>
         </div>
       </div>
-    </div>
+    </div>}
+    </>
     </ThemeProvider>
   );
 }
