@@ -12,13 +12,13 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 10px;
+  padding: 10px 15%;
   margin-top: 20px;
 }
 .project__item{
   height: 520px;
   width: 300px;
-  padding: 20px;
+  padding: 30px;
   background-color: rgba(144, 78, 206, 0.712);
   box-shadow: 2px 2px 2px 0px rgba(216, 216, 219, 0.932);
   border-radius: 15px;
@@ -57,6 +57,7 @@
 }
 .project__img{
   width: 200px;
+  height: 180px;
   object-fit: cover;
   margin: auto;
   border-radius: 10px;
@@ -84,6 +85,7 @@
   .project__container{
     flex-direction: column;
     width: 80%;
+    padding: 0;
   }
   .project__item{
     margin-bottom: 20px;
@@ -105,5 +107,6 @@
 @media(min-width: 600px){
   .project__container{
     flex-wrap: wrap;
+    flex-basis: 50%;
   }
 }

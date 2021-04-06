@@ -29,7 +29,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(101.58deg, #F3F5FB 2.73%, #B6B9CB 53.15%, #261D42 117.24%);
+  /* background: linear-gradient(101.58deg, #F3F5FB 2.73%, #B6B9CB 53.15%, #261D42 117.24%); */
+  background: linear-gradient(90deg, rgba(254,226,52,1) 28%, rgba(246,184,78,1) 89%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   padding: 20px;
@@ -84,9 +85,9 @@
   transform-origin:center right;
 } */
 .about__item p{
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 400;
-  margin-top: 10px;
+  padding: 10px 20px;
 }
 
 .about__body{

@@ -1,5 +1,5 @@
 import React from 'react'
-import {SiCplusplus, SiJava, SiJavascript, SiC, SiCss3, SiReact, SiGit, SiMysql, SiHtml5} from 'react-icons/si';
+import {SiCplusplus, SiJava, SiJavascript, SiC, SiCss3, SiReact, SiGit, SiMysql, SiHtml5, SiFirebase} from 'react-icons/si';
 import {IconContext} from 'react-icons';
 
 import './Skills.css';
@@ -14,11 +14,6 @@ const Skills = ({className}) => {
       name: "Java",
       eff: "85%",
       icon: <SiJava color = "#f59508"/>
-    },
-    {
-      name: "C",
-      eff: "75%",
-      icon: <SiC color = "#6ab8c1"/>
     },
     {
       name: "React",
@@ -37,13 +32,18 @@ const Skills = ({className}) => {
     },
     {
       name: "JavaScript",
-      eff: "55%",
+      eff: "70%",
       icon: <SiJavascript color = "#ffbd0a"/>
     },
     {
       name: "SQL",
       eff: "70%",
       icon: <SiMysql color = "#a094eb"/>,
+    },
+    {
+      name: "Firebase",
+      eff: "60%",
+      icon: <SiFirebase color = "#ffcc2f"/>
     },
     {
       name: "GIT",

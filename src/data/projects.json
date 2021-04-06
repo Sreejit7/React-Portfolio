@@ -24,6 +24,14 @@
       "url": "https://headliner.netlify.app/",
       "gh": "https://github.com/Sreejit7/React-Newsapp",
       "img": "/images/headliner.webp"
+    },
+    {
+      "name": "The Next Read",
+      "desc": "The Next Read is a platform for bibliophiles to share their books among each other by buying, selling, lending or borrowing used books.",
+      "tech": ["React JS", "Firebase", "Node JS", "Stripe Payments API"],
+      "url": "https://main.dgp6mnjdp6gab.amplifyapp.com/",
+      "gh": "https://github.com/Sreejit7/The-Next-Read",
+      "img": "/images/nextread.webp"
     }
   ]
 }

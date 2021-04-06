@@ -88,9 +88,9 @@ function App() {
   },[]);
 
   useEffect(() => {
-    const { height: headerHeight } = getDimensions(headerRef.current);
+    const { height: headerHeight } = getDimensions(headerRef?.current);
     const handleToTop = () => {
-      if(window.scrollY + headerHeight >= aboutRef.current.offsetTop ){
+      if(window.scrollY + headerHeight >= aboutRef?.current?.offsetTop ){
         setTopButton(true);
       }
       else{
