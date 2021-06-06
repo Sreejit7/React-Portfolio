@@ -1,6 +1,5 @@
 {
-  "projectItems": 
-  [
+  "projectItems": [
     {
       "name": "COVID-CARE",
       "desc": "COVID-CARE is a website designed for tracking the COVID-19 pandemic data like deaths, cases & recoveries, upcoming vaccine informtion & top headlines related to COVID-19.",

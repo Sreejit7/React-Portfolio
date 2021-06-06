@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
-body{
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
+body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,46 +9,46 @@ body{
   background: rgb(12, 4, 58);
 }
 
-.theme-button{
+.theme-button {
   position: absolute;
   top: 0;
   left: 0;
   padding: 5px;
   z-index: 15;
 }
-.app{
+.app {
   background: rgb(23, 8, 77);
 }
-.light-theme{
+.light-theme {
   background: rgb(216, 217, 218);
 }
-.app__header{
+.app__header {
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
 }
-.intro-line1{
+.intro-line1 {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
 }
-.intro-line2{
+.intro-line2 {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
 }
-.intro-line2 h1{
+.intro-line2 h1 {
   font-size: 90px;
   margin-left: 10px;
 }
-.app__intro{
+.app__intro {
   display: flex;
   flex-direction: column;
-  background-image: url('./backgrounds/portfolio-bg-dark.webp');
+  background-image: url("./backgrounds/portfolio-bg-dark.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -57,14 +57,14 @@ body{
   padding-bottom: 10vh;
   color: #fff;
 }
-.light-bg{
-  background-image: url('./backgrounds/portfolio-bg-light.webp');
+.light-bg {
+  background-image: url("./backgrounds/portfolio-bg-light.webp");
   color: rgb(15, 6, 0);
 }
-.app__intro__body{
+.app__intro__body {
   display: flex;
 }
-.intro__left{
+.intro__left {
   margin-top: 20vh;
   flex: 1;
   /* color: rgb(255, 255, 255); */
@@ -75,15 +75,15 @@ body{
   position: relative;
   z-index: 1;
 }
-.intro__left h1{
-  font-family: 'Righteous', cursive;
+.intro__left h1 {
+  font-family: "Righteous", cursive;
   text-align: center;
   text-shadow: 1px 1px 5px 1px rgb(1, 8, 20);
 }
-.intro__left p{
+.intro__left p {
   font-weight: 600;
 }
-.intro__details{
+.intro__details {
   display: flex;
   padding: 30px;
   flex-direction: column;
@@ -91,13 +91,13 @@ body{
   justify-content: center;
   margin-top: 20px;
 }
-.intro__right{
+.intro__right {
   flex: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.intro__desc{
+.intro__desc {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,15 +106,15 @@ body{
   word-spacing: 3px;
   line-height: 1.6;
   text-align: center;
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
 }
-.intro__img{
+.intro__img {
   width: 400px;
   object-fit: contain;
   margin: auto;
   margin-top: 20px;
 }
-.toTop{
+.toTop {
   position: sticky;
   left: 10px;
   bottom: 5%;
@@ -128,43 +128,50 @@ body{
   opacity: 0;
   margin-bottom: -20px;
 }
-.toTopIcon{
+.toTopIcon {
   font-size: 25px;
   color: #fff;
   animation: jumping 0.5s ease infinite;
 }
-.toTop:hover{
+.toTop:hover {
   opacity: 0.5;
   transform: scale(0.9);
 }
-.bottom-icon{
+.bottom-icon {
   color: #fff;
   position: absolute;
   bottom: 20px;
   left: 50%;
-  animation: jumping .5s ease infinite;
+  animation: jumping 0.5s ease infinite;
   opacity: 0;
   z-index: 1;
 }
-.visible{
+.visible {
   opacity: 0.75;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 8px;
-  background: rgb(3,15,41);
-  background: linear-gradient(180deg, rgba(3,15,41,1) 0%, rgba(21,4,46,1) 65%);
+  background: rgb(3, 15, 41);
+  background: linear-gradient(
+    180deg,
+    rgba(3, 15, 41, 1) 0%,
+    rgba(21, 4, 46, 1) 65%
+  );
   border-radius: 10px;
-} 
+}
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgb(3,15,41);
-  background: linear-gradient(180deg, rgba(3,15,41,1) 0%, rgba(21,4,46,1) 65%);
+  background: rgb(3, 15, 41);
+  background: linear-gradient(
+    180deg,
+    rgba(3, 15, 41, 1) 0%,
+    rgba(21, 4, 46, 1) 65%
+  );
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(107, 50, 199);
-  background: linear-gradient(180deg, rgb(127, 46, 202) 0%, rgb(50, 94, 214) 46%, rgba(8,156,255,1) 100%);
+  background: #fff;
   border-radius: 10px;
 }
 
@@ -172,39 +179,39 @@ body{
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(142, 115, 163);
 }
-@keyframes jumping{
-  from{
+@keyframes jumping {
+  from {
     transform: translateY(0.5px);
   }
-  to{
+  to {
     transform: translateY(0px);
   }
 }
-.light{
+.light {
   color: rgb(18, 18, 19);
 }
 
-@media(max-width: 768px){
-  .app__intro{
+@media (max-width: 768px) {
+  .app__intro {
     flex-direction: column;
   }
-  .intro__img{
+  .intro__img {
     width: 300px;
     margin-top: 20px;
   }
-  
 }
-@media(max-width: 450px){
-  .app__switch{
+@media (max-width: 450px) {
+  .app__switch {
     transform: translate(-80vw, 20%);
   }
-  .intro__details, .intro__left{
+  .intro__details,
+  .intro__left {
     transform: scale(0.8);
   }
-  .intro__left{
+  .intro__left {
     max-width: 100%;
   }
-  .intro__details{
+  .intro__details {
     margin-top: -50px;
   }
 }

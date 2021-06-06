@@ -1,36 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap");
 
-.about{
+.about {
   display: flex;
   flex-direction: column;
   padding-top: 10vh;
   padding-bottom: 10vh;
 }
-.about__header{
+.about__header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-bottom: 5vh;
 }
-.about__header h1{
+.about__header h1 {
   margin-bottom: 30px;
   font-size: 35px;
 }
-.about__area{
+.about__area {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
 }
-.about__desc{
+.about__desc {
   margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   /* background: linear-gradient(101.58deg, #F3F5FB 2.73%, #B6B9CB 53.15%, #261D42 117.24%); */
-  background: linear-gradient(90deg, rgba(254,226,52,1) 28%, rgba(246,184,78,1) 89%);
+  background: linear-gradient(
+    90deg,
+    rgba(254, 226, 52, 1) 28%,
+    rgba(246, 184, 78, 1) 89%
+  );
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   padding: 20px;
@@ -39,20 +42,20 @@
   border-bottom: 0.25px solid black;
   border-right: 0.25px solid black;
 }
-.about__item{
+.about__item {
   color: #000;
   margin-left: 40px;
   line-height: 1.4;
   margin: 10px 0px;
 }
-.about__item h2{
-  position:relative;
+.about__item h2 {
+  position: relative;
   z-index: 2;
   margin-bottom: 5px;
   font-size: 2rem;
   font-weight: 800;
   width: fit-content;
-  font-family: 'Ribeye Marrow', cursive;
+  font-family: "Ribeye Marrow", cursive;
   mix-blend-mode: normal;
   box-sizing: border-box;
   transform: rotate(-3.04deg);
@@ -84,16 +87,16 @@
   transform:rotate(180deg);
   transform-origin:center right;
 } */
-.about__item p{
+.about__item p {
   font-size: 1.35rem;
   font-weight: 400;
   padding: 10px 20px;
 }
 
-.about__body{
+.about__body {
   display: flex;
 }
-.about__left{
+.about__left {
   flex: 0.5;
   display: flex;
   flex-direction: column;
@@ -101,61 +104,62 @@
   justify-content: center;
 }
 
-@media(max-width: 1160px){
-  .contact__info{
+@media (max-width: 1160px) {
+  .contact__info {
     font-size: 1rem;
     font-weight: 500;
   }
-  .about__area{
+  .about__area {
     flex-direction: column;
   }
 }
-@media(max-width: 850px){
-  .about__body{
+@media (max-width: 850px) {
+  .about__body {
     flex-direction: column;
   }
-  .about__contact, .education{
+  .about__contact,
+  .education {
     width: 80%;
   }
-  .about__right{
+  .about__right {
     margin-top: 30px;
   }
-  .about__title{
+  .about__title {
     font-size: smaller;
   }
-  .skillbar, .skillbar span{
+  .skillbar,
+  .skillbar span {
     height: 12px;
   }
-  .about__desc{
+  .about__desc {
     max-width: 80vw;
     margin: auto;
   }
-  .about__item{
+  .about__item {
     margin-left: 10px;
   }
-  .about__item h2{
+  .about__item h2 {
     font-size: 1.5rem;
     font-weight: 500;
   }
-  .about__img{
+  .about__img {
     margin-bottom: 10px;
   }
-  .about__img2{
+  .about__img2 {
     margin-top: 20px;
   }
 }
-@media(max-width: 600px){
-  .contact__info{
+@media (max-width: 600px) {
+  .contact__info {
     flex-direction: column;
     font-size: 1rem;
   }
-  .contact__img{
+  .contact__img {
     margin: auto;
   }
 }
-@media(max-width: 425px){
-  .hobbies__list{
+@media (max-width: 425px) {
+  .hobbies__list {
     flex-direction: column;
   }
-  
 }
