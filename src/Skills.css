@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap');
-.skills{
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap");
+.skills {
   padding-top: 10vh;
   display: flex;
   flex-direction: column;
@@ -7,28 +7,28 @@
   padding-bottom: 10vh;
   min-height: 80vh;
 }
-.skill__title{
-  font-family: 'Cinzel Decorative', cursive;
+.skill__title {
+  font-family: "Cinzel Decorative", cursive;
   margin-bottom: 40px;
 }
-.skill__area{
+.skill__area {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   padding: 0px 15%;
 }
-.skill__row{
+.skill__row {
   display: flex;
 }
-.skill__container{
+.skill__container {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 80vw;
   margin-bottom: 40px;
 }
-.skill__item{
+.skill__item {
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -41,25 +41,39 @@
   border-radius: 10px;
   padding-bottom: 2px;
 }
-.skill__item:hover{
-  transform: scale(1.1);
+.skill__item:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
 }
-.skill__item h2{
+.skill__item h2 {
   /* color: #fff; */
 }
-.skill-icon{
+.skill-icon {
   font-size: 5rem;
   margin: auto;
 }
-.react-icon{
-  -webkit-animation:spin 4s linear infinite;
-  -moz-animation:spin 4s linear infinite;
-  animation:spin 4s linear infinite;
+.react-icon {
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
 }
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-.skillbar{
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.skillbar {
   position: absolute;
   bottom: 1px;
   width: 98%;
@@ -70,44 +84,62 @@
   overflow: hidden;
   box-shadow: 0px 0px 10px #483d86ee;
 }
-.skillbar span{
-  background: rgb(245,228,8);
-  background: -moz-linear-gradient(90deg, rgba(245,228,8,1) 8%, rgba(225,240,51,1) 39%, rgba(24,238,19,1) 81%, rgba(6,207,3,1) 97%);
-  background: -webkit-linear-gradient(90deg, rgba(245,228,8,1) 8%, rgba(225,240,51,1) 39%, rgba(24,238,19,1) 81%, rgba(6,207,3,1) 97%);
-  background: linear-gradient(90deg, rgba(245,228,8,1) 8%, rgba(225,240,51,1) 39%, rgba(24,238,19,1) 81%, rgba(6,207,3,1) 97%);
+.skillbar span {
+  background: rgb(245, 228, 8);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(245, 228, 8, 1) 8%,
+    rgba(225, 240, 51, 1) 39%,
+    rgba(24, 238, 19, 1) 81%,
+    rgba(6, 207, 3, 1) 97%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(245, 228, 8, 1) 8%,
+    rgba(225, 240, 51, 1) 39%,
+    rgba(24, 238, 19, 1) 81%,
+    rgba(6, 207, 3, 1) 97%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(245, 228, 8, 1) 8%,
+    rgba(225, 240, 51, 1) 39%,
+    rgba(24, 238, 19, 1) 81%,
+    rgba(6, 207, 3, 1) 97%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f5e408",endColorstr="#06cf03",GradientType=1);
   height: 8px;
   border-radius: 10px;
   float: left;
 }
-@media(max-width: 990px){
-  .skill__row{
+@media (max-width: 990px) {
+  .skill__row {
     flex-direction: column;
   }
 }
-@media (max-width: 768px){
-  .skill__title h1{
+@media (max-width: 768px) {
+  .skill__title h1 {
     font-size: 1.5rem;
   }
-  .skill__item{
+  .skill__item {
     width: 120px;
   }
-  .skill__area{
+  .skill__area {
     padding: 10px;
   }
 }
-@media (max-width: 450px){
-  .skill__container{
+@media (max-width: 450px) {
+  .skill__container {
     max-width: 90vw;
     margin: auto;
   }
-  .skill__item{
+  .skill__item {
     transform: scale(0.8);
     height: 160px;
     width: 100px;
     margin: 5px;
   }
-  .skill__item h2{
+  .skill__item h2 {
     font-size: 1.2rem;
   }
 }
