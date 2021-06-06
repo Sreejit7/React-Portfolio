@@ -1,4 +1,3 @@
-import React from "react";
 import "./Sidebar.css";
 import CloseIcon from "@material-ui/icons/Close";
 import { sidebarItems } from "./SidebarItems";

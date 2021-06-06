@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { SunspotLoader } from "react-awesome-loaders";
 import "./App.css";
 import { motion } from "framer-motion";

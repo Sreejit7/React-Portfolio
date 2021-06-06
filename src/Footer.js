@@ -1,4 +1,3 @@
-import React from "react";
 import "./Footer.css";
 import { GitHub, LinkedIn } from "@material-ui/icons";
 import { ExternalLink } from "react-external-link";

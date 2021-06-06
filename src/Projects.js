@@ -1,4 +1,3 @@
-import React from "react";
 import "./Project.css";
 import { GitHub } from "@material-ui/icons";
 import IconButton from "@material-ui/core/IconButton";

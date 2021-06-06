@@ -1,4 +1,3 @@
-import React from "react";
 import emailjs from "emailjs-com";
 import { Mail, Home, GitHub, LinkedIn } from "@material-ui/icons";
 import IconButton from "@material-ui/core/IconButton";
