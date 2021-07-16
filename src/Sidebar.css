@@ -6,6 +6,7 @@
   top: 10%;
   left: 4%;
   z-index: 25;
+  margin-bottom: 4vh;
 }
 .sidebar__menu {
   width: 100%;
@@ -29,7 +30,7 @@
   justify-content: center;
   padding: 8px 0px 8px 0px;
   list-style: none;
-  height: 80px;
+  height: 60px;
   width: 100vw;
   font-family: "Fredoka One", cursive;
 }

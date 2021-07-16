@@ -60,6 +60,12 @@ function Header({ section }) {
         }}
       >
         <ThemedItems className="header__items">
+          <ExternalLink
+            href="https://blog.sreejit.dev"
+            className="header__link"
+          >
+            <h2>Blog</h2>
+          </ExternalLink>
           <Link
             smooth
             to="#about"
