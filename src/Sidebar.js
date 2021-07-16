@@ -12,16 +12,17 @@ const Sidebar = ({ sidebar, showSidebar }) => {
             <CloseIcon fontSize="large" className="close__icon" />
           </li>
           {sidebarItems.map((item, index) => {
+            const { external, link, name } = item;
             return (
               <li key={index} className="sidebar__text">
-                {item.name !== "RESUME" && (
-                  <HLink smooth to={item.link}>
-                    <span>{item.name}</span>
+                {!external && (
+                  <HLink smooth to={link}>
+                    <span>{name}</span>
                   </HLink>
                 )}
-                {item.name === "RESUME" && (
-                  <ExternalLink href={item.link}>
-                    <span>{item.name}</span>
+                {external && (
+                  <ExternalLink href={link}>
+                    <span>{name}</span>
                   </ExternalLink>
                 )}
               </li>
